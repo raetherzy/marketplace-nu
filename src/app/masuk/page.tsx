@@ -23,14 +23,14 @@ export default function MasukPage() {
         <div className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-nu-primary-light rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <LogIn className="w-8 h-8 text-nu-primary" />
+            <div className="w-16 h-16 bg-brand-primary-light rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <LogIn className="w-8 h-8 text-brand-primary" />
             </div>
             <h1 className="text-2xl font-bold text-neutral-800">
               Masuk ke Akun
             </h1>
             <p className="text-sm text-neutral-400 mt-1">
-              Selamat datang kembali di Marketplace NU
+              Selamat datang kembali di Toko Ponpes
             </p>
           </div>
 
@@ -77,13 +77,13 @@ export default function MasukPage() {
               <label className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="checkbox"
-                  className="accent-nu-primary w-4 h-4"
+                  className="accent-brand-primary w-4 h-4"
                 />
                 <span className="text-neutral-600">Ingat saya</span>
               </label>
               <Link
                 href="#"
-                className="text-nu-primary font-medium hover:underline"
+                className="text-brand-primary font-medium hover:underline"
               >
                 Lupa sandi?
               </Link>
@@ -106,7 +106,7 @@ export default function MasukPage() {
             Belum punya akun?{" "}
             <Link
               href="/daftar"
-              className="text-nu-primary font-semibold hover:underline"
+              className="text-brand-primary font-semibold hover:underline"
             >
               Daftar di sini
             </Link>

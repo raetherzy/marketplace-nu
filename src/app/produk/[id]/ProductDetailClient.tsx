@@ -11,11 +11,16 @@ import {
   RotateCcw,
   ShoppingCart,
   Heart,
+  MessageSquare,
+  ThumbsUp,
+  MessageCircle,
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { formatCurrency } from "@/lib/utils";
 import { useCart } from "@/context/CartContext";
+import { useWishlist } from "@/context/WishlistContext";
+import { dummyReviews } from "@/data/products";
 import type { Product } from "@/types";
 
 interface Props {
@@ -24,9 +29,11 @@ interface Props {
 
 export default function ProductDetailClient({ product }: Props) {
   const { addItem } = useCart();
+  const { toggleWishlist, isWishlisted } = useWishlist();
+  const wishlisted = isWishlisted(product.id);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const [activeTab, setActiveTab] = useState<"deskripsi" | "spesifikasi">("deskripsi");
+  const [activeTab, setActiveTab] = useState<"deskripsi" | "spesifikasi" | "ulasan">("deskripsi");
 
   const stockLabel = {
     tersedia: "Tersedia",
@@ -74,7 +81,7 @@ export default function ProductDetailClient({ product }: Props) {
                 onClick={() => setSelectedImage(idx)}
                 className={`relative w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
                   selectedImage === idx
-                    ? "border-nu-primary"
+                    ? "border-brand-primary"
                     : "border-transparent hover:border-neutral-300"
                 }`}
               >
@@ -126,7 +133,7 @@ export default function ProductDetailClient({ product }: Props) {
         {/* Price */}
         <div className="bg-neutral-50 rounded-xl p-5">
           <div className="flex items-baseline gap-3 mb-2">
-            <span className="text-3xl font-bold text-nu-primary">
+            <span className="text-3xl font-bold text-brand-primary">
               {formatCurrency(displayPrice)}
             </span>
             <span className="text-sm text-neutral-400">/ rim</span>
@@ -138,14 +145,14 @@ export default function ProductDetailClient({ product }: Props) {
                 <span className="text-sm text-neutral-500 line-through">
                   {formatCurrency(product.price)}
                 </span>
-                <Badge className="bg-nu-secondary/90 text-white border-nu-secondary">
+                <Badge className="bg-brand-secondary/90 text-white border-brand-secondary">
                   {Math.round((1 - product.priceGrosir / product.price) * 100)}%
                   OFF
                 </Badge>
               </div>
               <p className="text-sm text-neutral-600">
                 Harga Grosir:{" "}
-                <span className="font-semibold text-nu-secondary">
+                <span className="font-semibold text-brand-secondary">
                   {formatCurrency(product.priceGrosir)}
                 </span>{" "}
                 <span className="text-neutral-400">
@@ -208,9 +215,25 @@ export default function ProductDetailClient({ product }: Props) {
               <ShoppingCart className="w-5 h-5" />
               {product.stock === "habis" ? "Stok Habis" : "Tambah ke Keranjang"}
             </Button>
-            <Button variant="outline" size="lg">
-              <Heart className="w-5 h-5" />
+            <Button
+              variant={wishlisted ? "primary" : "outline"}
+              size="lg"
+              onClick={() => toggleWishlist(product.id)}
+              aria-label={wishlisted ? "Hapus dari wishlist" : "Tambah ke wishlist"}
+            >
+              <Heart className={`w-5 h-5 ${wishlisted ? "fill-current" : ""}`} />
             </Button>
+            <a
+              href={`https://wa.me/6281234567890?text=${encodeURIComponent(
+                `Assalamu'alaikum, saya ingin pesan *${product.name}* (SKU: ${product.sku}) sebanyak ${quantity} buah. Apakah tersedia?`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
+            >
+              <MessageCircle className="w-5 h-5" />
+              <span className="hidden sm:inline">Pes via WhatsApp</span>
+            </a>
           </div>
         </div>
 
@@ -237,8 +260,8 @@ export default function ProductDetailClient({ product }: Props) {
               key={title}
               className="flex items-center gap-3 p-3 bg-white border border-neutral-200 rounded-xl"
             >
-              <div className="w-10 h-10 bg-nu-primary-light rounded-lg flex items-center justify-center shrink-0">
-                <Icon className="w-5 h-5 text-nu-primary" />
+              <div className="w-10 h-10 bg-brand-primary-light rounded-lg flex items-center justify-center shrink-0">
+                <Icon className="w-5 h-5 text-brand-primary" />
               </div>
               <div>
                 <p className="text-sm font-semibold text-neutral-800">{title}</p>
@@ -251,13 +274,13 @@ export default function ProductDetailClient({ product }: Props) {
         {/* Tabs: Description & Specs */}
         <div className="border-t pt-6">
           <div className="flex gap-6 border-b">
-            {(["deskripsi", "spesifikasi"] as const).map((tab) => (
+            {(["deskripsi", "spesifikasi", "ulasan"] as const).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`pb-3 text-sm font-medium transition-colors capitalize ${
                   activeTab === tab
-                    ? "text-nu-primary border-b-2 border-nu-primary"
+                    ? "text-brand-primary border-b-2 border-brand-primary"
                     : "text-neutral-400 hover:text-neutral-600"
                 }`}
               >
@@ -271,7 +294,7 @@ export default function ProductDetailClient({ product }: Props) {
               <p className="text-neutral-600 leading-relaxed">
                 {product.description}
               </p>
-            ) : (
+            ) : activeTab === "spesifikasi" ? (
               <div className="space-y-2">
                 {Object.entries(product.specs).map(([key, value]) => (
                   <div
@@ -282,6 +305,61 @@ export default function ProductDetailClient({ product }: Props) {
                       {key}
                     </span>
                     <span className="text-sm text-neutral-700">{value}</span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="space-y-5">
+                {/* Review summary */}
+                <div className="flex items-center gap-4 p-4 bg-neutral-50 rounded-xl">
+                  <div className="text-center">
+                    <p className="text-3xl font-bold text-brand-primary">{product.rating}</p>
+                    <div className="flex items-center gap-0.5 mt-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className={`w-3.5 h-3.5 ${i < Math.floor(product.rating) ? "fill-amber-400 text-amber-400" : "text-neutral-300"}`} />
+                      ))}
+                    </div>
+                    <p className="text-xs text-neutral-400 mt-0.5">{product.reviewCount} ulasan</p>
+                  </div>
+                  <div className="flex-1 space-y-1">
+                    {[5, 4, 3, 2, 1].map((star) => {
+                      const pct = star === 5 ? 68 : star === 4 ? 22 : star === 3 ? 7 : star === 2 ? 2 : 1;
+                      return (
+                        <div key={star} className="flex items-center gap-2 text-xs">
+                          <span className="w-3 text-neutral-500">{star}</span>
+                          <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                          <div className="flex-1 h-2 bg-neutral-200 rounded-full overflow-hidden">
+                            <div className="h-full bg-amber-400 rounded-full" style={{ width: `${pct}%` }} />
+                          </div>
+                          <span className="text-neutral-400 w-8">{pct}%</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Review list */}
+                {dummyReviews.slice(0, 4).map((review) => (
+                  <div key={review.id} className="border-b border-neutral-100 pb-4 last:border-0">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 rounded-full bg-brand-primary-light flex items-center justify-center text-xs font-semibold text-brand-primary">
+                        {review.userName.charAt(0)}
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-neutral-800">{review.userName}</p>
+                        <p className="text-xs text-neutral-400">{review.pesantren} &bull; {review.date}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1 mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className={`w-3.5 h-3.5 ${i < review.rating ? "fill-amber-400 text-amber-400" : "text-neutral-300"}`} />
+                      ))}
+                    </div>
+                    <p className="text-sm text-neutral-600 leading-relaxed">{review.text}</p>
+                    <button className="mt-2 flex items-center gap-1 text-xs text-neutral-400 hover:text-brand-primary transition-colors">
+                      <ThumbsUp className="w-3.5 h-3.5" />
+                      Membantu ({review.helpful})
+                    </button>
                   </div>
                 ))}
               </div>

@@ -10,10 +10,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variants = {
-  primary: "bg-nu-primary text-white hover:bg-nu-primary-dark active:bg-nu-primary-dark/90 shadow-sm",
-  secondary: "bg-nu-secondary text-white hover:bg-nu-secondary-dark active:bg-nu-secondary-dark/90 shadow-sm",
+  primary: "bg-brand-primary text-white hover:bg-brand-primary-dark active:bg-brand-primary-dark/90 shadow-sm",
+  secondary: "bg-brand-secondary text-white hover:bg-brand-secondary-dark active:bg-brand-secondary-dark/90 shadow-sm",
   outline:
-    "border-2 border-nu-primary text-nu-primary hover:bg-nu-primary hover:text-white active:bg-nu-primary-dark",
+    "border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white active:bg-brand-primary-dark",
   ghost: "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-800 active:bg-neutral-200",
 };
 
@@ -30,7 +30,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         disabled={disabled}
         className={cn(
-          "inline-flex items-center justify-center gap-2 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-nu-primary/30 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed",
+          "inline-flex items-center justify-center gap-2 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed",
           variants[variant],
           sizes[size],
           fullWidth && "w-full",

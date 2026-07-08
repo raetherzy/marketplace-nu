@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    "marketplace NU",
-    "Nahdlatul Ulama",
+    "marketplace pesantren",
+    "pesantren Indonesia",
     "pondok pesantren",
     "alat tulis pesantren",
     "kertas",

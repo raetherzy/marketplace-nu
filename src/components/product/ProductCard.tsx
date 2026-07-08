@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Star, ShoppingCart } from "lucide-react";
+import { Star, ShoppingCart, Heart } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { formatCurrency } from "@/lib/utils";
 import { useCart } from "@/context/CartContext";
+import { useWishlist } from "@/context/WishlistContext";
 import type { Product } from "@/types";
 
 interface ProductCardProps {
@@ -21,6 +22,8 @@ const stockLabel = {
 
 export function ProductCard({ product }: ProductCardProps) {
   const { addItem } = useCart();
+  const { toggleWishlist, isWishlisted } = useWishlist();
+  const wishlisted = isWishlisted(product.id);
 
   return (
     <div className="bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-lg transition-shadow group">
@@ -38,16 +41,28 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
         {product.priceGrosir && (
           <div className="absolute top-2 right-2">
-            <Badge className="bg-nu-secondary/90 text-white border-nu-secondary">Grosir</Badge>
+            <Badge className="bg-brand-secondary/90 text-white border-brand-secondary">Grosir</Badge>
           </div>
         )}
       </Link>
+
+      {/* Wishlist toggle */}
+      <button
+        type="button"
+        onClick={() => toggleWishlist(product.id)}
+        className="absolute top-2 right-2 z-10 p-1.5 rounded-full bg-white/80 backdrop-blur-sm shadow-sm hover:bg-white transition-colors"
+        aria-label={wishlisted ? "Hapus dari wishlist" : "Tambah ke wishlist"}
+      >
+        <Heart
+          className={`w-4 h-4 transition-colors ${wishlisted ? "fill-red-500 text-red-500" : "text-neutral-400"}`}
+        />
+      </button>
 
       {/* Content */}
       <div className="p-4">
         <p className="text-xs text-neutral-400 mb-1">{product.categoryName}</p>
         <Link href={`/produk/${product.id}`}>
-          <h3 className="font-semibold text-neutral-800 text-sm mb-2 line-clamp-2 hover:text-nu-primary transition-colors">
+          <h3 className="font-semibold text-neutral-800 text-sm mb-2 line-clamp-2 hover:text-brand-primary transition-colors">
             {product.name}
           </h3>
         </Link>
@@ -61,7 +76,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
         {/* Price */}
         <div className="mb-3">
-          <p className="text-lg font-bold text-nu-primary">{formatCurrency(product.price)}</p>
+          <p className="text-lg font-bold text-brand-primary">{formatCurrency(product.price)}</p>
           {product.priceGrosir && (
             <p className="text-xs text-neutral-400">
               Grosir: {formatCurrency(product.priceGrosir)}{" "}

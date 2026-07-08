@@ -14,7 +14,7 @@ import { formatCurrency } from "@/lib/utils";
 
 export const metadata = {
   title: "Konfirmasi Pesanan",
-  description: "Detail status pesanan Anda di Marketplace NU.",
+  description: "Detail status pesanan Anda di Toko Ponpes.",
 };
 
 const statusConfig = {
@@ -72,7 +72,7 @@ export default function PesananPage() {
         </p>
         <p className="text-sm text-neutral-500 mt-1">
           Nomor Pesanan:{" "}
-          <span className="font-semibold text-nu-primary">
+          <span className="font-semibold text-brand-primary">
             ORD-20250626-003
           </span>
         </p>
@@ -100,9 +100,9 @@ export default function PesananPage() {
                       <div
                         className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 border-2 ${
                           isCompleted
-                            ? "bg-nu-primary border-nu-primary text-white"
+                            ? "bg-brand-primary border-brand-primary text-white"
                             : isCurrent
-                            ? "bg-nu-primary-light border-nu-primary text-nu-primary"
+                            ? "bg-brand-primary-light border-brand-primary text-brand-primary"
                             : "bg-white border-neutral-200 text-neutral-300"
                         }`}
                       >
@@ -124,14 +124,14 @@ export default function PesananPage() {
               {/* Progress Line */}
               <div className="absolute top-6 left-0 right-0 h-0.5 bg-neutral-200 -z-0">
                 <div
-                  className="h-full bg-nu-primary transition-all duration-500"
+                  className="h-full bg-brand-primary transition-all duration-500"
                   style={{ width: `${((currentStep - 1) / (steps.length - 1)) * 100}%` }}
                 />
               </div>
             </div>
 
             <div className="mt-6 bg-neutral-50 rounded-lg p-4 flex items-center gap-3">
-              <Clock className="w-5 h-5 text-nu-primary shrink-0" />
+              <Clock className="w-5 h-5 text-brand-primary shrink-0" />
               <p className="text-sm text-neutral-600">
                 Estimasi tiba:{" "}
                 <span className="font-semibold text-neutral-800">
@@ -172,7 +172,7 @@ export default function PesananPage() {
           {/* Shipping Info */}
           <div className="bg-white rounded-xl border border-neutral-200 p-6">
             <div className="flex items-center gap-2 mb-4">
-              <MapPin className="w-5 h-5 text-nu-primary" />
+              <MapPin className="w-5 h-5 text-brand-primary" />
               <h3 className="font-semibold text-neutral-800">
                 Alamat Pengiriman
               </h3>
@@ -190,7 +190,7 @@ export default function PesananPage() {
           {/* Payment Info */}
           <div className="bg-white rounded-xl border border-neutral-200 p-6">
             <div className="flex items-center gap-2 mb-4">
-              <CreditCard className="w-5 h-5 text-nu-primary" />
+              <CreditCard className="w-5 h-5 text-brand-primary" />
               <h3 className="font-semibold text-neutral-800">
                 Metode Pembayaran
               </h3>
@@ -221,7 +221,7 @@ export default function PesananPage() {
               </div>
               <div className="border-t pt-2 flex justify-between">
                 <span className="font-semibold text-neutral-800">Total</span>
-                <span className="font-bold text-nu-primary text-lg">
+                <span className="font-bold text-brand-primary text-lg">
                   {formatCurrency(order.total)}
                 </span>
               </div>

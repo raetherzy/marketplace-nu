@@ -41,17 +41,17 @@ export default function ProductDetailPage({ params }: Props) {
       <div className="bg-white border-b">
         <div className="container-page py-3">
           <nav className="flex items-center gap-2 text-sm text-neutral-400">
-            <Link href="/" className="hover:text-nu-primary">
+            <Link href="/" className="hover:text-brand-primary">
               Beranda
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/produk" className="hover:text-nu-primary">
+            <Link href="/produk" className="hover:text-brand-primary">
               Produk
             </Link>
             <ChevronRight className="w-4 h-4" />
             <Link
               href={`/produk?kategori=${product.category}`}
-              className="hover:text-nu-primary"
+              className="hover:text-brand-primary"
             >
               {product.categoryName}
             </Link>
@@ -93,7 +93,7 @@ export default function ProductDetailPage({ params }: Props) {
                     <h3 className="font-semibold text-neutral-800 text-sm line-clamp-2 mb-2">
                       {p.name}
                     </h3>
-                    <p className="font-bold text-nu-primary">
+                    <p className="font-bold text-brand-primary">
                       Rp {p.price.toLocaleString("id-ID")}
                     </p>
                   </div>

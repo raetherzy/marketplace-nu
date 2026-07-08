@@ -8,7 +8,7 @@
   }
 
   ::selection {
-    @apply bg-nu-primary/20 text-nu-primary;
+    @apply bg-brand-primary/20 text-brand-primary;
   }
 }
 

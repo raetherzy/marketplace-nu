@@ -59,11 +59,11 @@ export default function CheckoutPage() {
     <div className="container-page section-padding">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-sm text-neutral-400 mb-6">
-        <Link href="/" className="hover:text-nu-primary">
+        <Link href="/" className="hover:text-brand-primary">
           Beranda
         </Link>
         <span>/</span>
-        <Link href="/keranjang" className="hover:text-nu-primary">
+        <Link href="/keranjang" className="hover:text-brand-primary">
           Keranjang
         </Link>
         <span>/</span>
@@ -78,7 +78,7 @@ export default function CheckoutPage() {
           {/* Shipping Address */}
           <section className="bg-white rounded-xl border border-neutral-200 p-6">
             <div className="flex items-center gap-2 mb-5">
-              <MapPin className="w-5 h-5 text-nu-primary" />
+              <MapPin className="w-5 h-5 text-brand-primary" />
               <h2 className="font-semibold text-neutral-800">
                 Alamat Pengiriman
               </h2>
@@ -123,7 +123,7 @@ export default function CheckoutPage() {
           {/* Voucher */}
           <section className="bg-white rounded-xl border border-neutral-200 p-6">
             <div className="flex items-center gap-2 mb-5">
-              <Ticket className="w-5 h-5 text-nu-primary" />
+              <Ticket className="w-5 h-5 text-brand-primary" />
               <h2 className="font-semibold text-neutral-800">
                 Voucher Diskon
               </h2>
@@ -134,7 +134,7 @@ export default function CheckoutPage() {
                 value={voucherCode}
                 onChange={(e) => setVoucherCode(e.target.value)}
                 placeholder="Masukkan kode voucher (coba: NU5)"
-                className="flex-1 px-4 py-2.5 text-sm border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-nu-primary/30 focus:border-nu-primary"
+                className="flex-1 px-4 py-2.5 text-sm border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary"
                 disabled={voucherApplied}
               />
               <Button
@@ -185,7 +185,7 @@ export default function CheckoutPage() {
                     key={method.id}
                     className={`flex items-center gap-4 p-4 border-2 rounded-xl cursor-pointer transition-colors ${
                       paymentMethod === method.id
-                        ? "border-nu-primary bg-nu-primary-light/30"
+                        ? "border-brand-primary bg-brand-primary-light/30"
                         : "border-neutral-200 hover:border-neutral-300"
                     }`}
                   >
@@ -195,10 +195,10 @@ export default function CheckoutPage() {
                       value={method.id}
                       checked={paymentMethod === method.id}
                       onChange={(e) => setPaymentMethod(e.target.value as PaymentMethod)}
-                      className="accent-nu-primary"
+                      className="accent-brand-primary"
                     />
                     <div className="w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-nu-primary" />
+                      <Icon className="w-5 h-5 text-brand-primary" />
                     </div>
                     <div className="flex-1">
                       <p className="font-medium text-neutral-800">{method.title}</p>
@@ -268,7 +268,7 @@ export default function CheckoutPage() {
               )}
               <div className="border-t pt-2 flex justify-between">
                 <span className="font-semibold text-neutral-800">Total</span>
-                <span className="font-bold text-nu-primary text-lg">
+                <span className="font-bold text-brand-primary text-lg">
                   {formatCurrency(total)}
                 </span>
               </div>

@@ -16,83 +16,59 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative bg-[#067447] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/patterns/green-dot.svg')] opacity-10" />
-        <div className="container-page relative z-10 pt-16 pb-8 md:pt-24 md:pb-10 lg:pt-32 lg:pb-12">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            {/* Logo Column */}
-            <div className="flex-shrink-0 flex justify-center items-center w-full lg:w-[40%]">
-              <div className="relative">
-                <Image
-                  src="/logonukuning.jpg"
-                  alt="Logo NU"
-                  width={500}
-                  height={500}
-                  priority
-                  className="relative animate-float w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain animate-fade-in-up"
-                />
-              </div>
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-brand-secondary/10 rounded-full translate-y-1/2 -translate-x-1/4 blur-2xl" />
+
+        <div className="container-page relative z-10 py-16 sm:py-20 md:py-28 lg:py-36">
+          <div className="max-w-3xl mx-auto text-center">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 sm:mb-8">
+              <span className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse" />
+              <span className="text-xs sm:text-sm font-medium text-white/90">Marketplace Pesantren #1 Indonesia</span>
             </div>
 
-            {/* Text Column */}
-            <div className="flex-1 w-full lg:w-[60%]">
-              <div className="animate-fade-in-up-delay">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                  Marketplace Resmi{" "}
-                  <span className="text-nu-secondary">NU</span> untuk{" "}
-                  <span className="block text-nu-secondary">Pondok Pesantren</span>
-                </h1>
-                <p className="text-lg text-white/80 mb-8 max-w-2xl leading-relaxed">
-                  Platform pengadaan kebutuhan pesantren yang terpercaya. Menyediakan alat tulis, kertas,
-                  dan perlengkapan pendidikan berkualitas dengan harga terjangkau untuk pesantren di
-                  seluruh Indonesia.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 mb-8">
-                  <Link href="/produk">
-                    <Button
-                      variant="secondary"
-                      size="lg"
-                      className="text-nu-primary-dark"
-                    >
-                      <ShoppingBag className="w-5 h-5" />
-                      Lihat Katalog Produk
-                    </Button>
-                  </Link>
-                  <Link href="/tentang">
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="border-white text-white hover:bg-white hover:text-nu-primary"
-                    >
-                      Tentang Platform
-                    </Button>
-                  </Link>
-                </div>
+            {/* Heading */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] mb-5 sm:mb-6">
+              Kebutuhan Pesantren
+              <span className="block text-brand-secondary mt-1">Satu Tempat, Harga Terbaik</span>
+            </h1>
 
-                {/* Trust badges */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4">
-                    <Shield className="w-8 h-8 text-nu-secondary shrink-0" />
-                    <div>
-                      <p className="font-semibold text-sm">Partner Terpercaya</p>
-                      <p className="text-xs text-white/70">Produk langsung dari berbagai partner</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4">
-                    <Truck className="w-8 h-8 text-nu-secondary shrink-0" />
-                    <div>
-                      <p className="font-semibold text-sm">Pengiriman Aman</p>
-                      <p className="text-xs text-white/70">Jangkau seluruh Indonesia</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4">
-                    <Star className="w-8 h-8 text-nu-secondary shrink-0" />
-                    <div>
-                      <p className="font-semibold text-sm">Harga Khusus Pesantren</p>
-                      <p className="text-xs text-white/70">Hemat dengan harga grosir</p>
-                    </div>
+            {/* Subtitle */}
+            <p className="text-base sm:text-lg md:text-xl text-white/75 max-w-xl mx-auto leading-relaxed mb-8 sm:mb-10">
+              Platform pengadaan kertas, buku, alat tulis, dan perlengkapan pendidikan berkualitas untuk pesantren di seluruh Indonesia.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10 sm:mb-14">
+              <Link href="/produk">
+                <Button variant="secondary" size="lg" className="text-brand-primary-dark w-full sm:w-auto">
+                  <ShoppingBag className="w-5 h-5" />
+                  Lihat Katalog Produk
+                </Button>
+              </Link>
+              <Link href="/tentang">
+                <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto">
+                  Tentang Platform
+                </Button>
+              </Link>
+            </div>
+
+            {/* Trust badges */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+              {[
+                { icon: Shield, title: "Partner Terpercaya", desc: "Produk original dari partner resmi" },
+                { icon: Truck, title: "Pengiriman Nasional", desc: "Jangkau seluruh Indonesia" },
+                { icon: Star, title: "Harga Grosir", desc: "Hemat untuk pesantren" },
+              ].map(({ icon: Icon, title, desc }) => (
+                <div key={title} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3.5">
+                  <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-brand-secondary shrink-0" />
+                  <div className="text-left">
+                    <p className="font-semibold text-sm">{title}</p>
+                    <p className="text-xs text-white/60">{desc}</p>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -113,7 +89,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/produk"
-              className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-nu-primary hover:text-nu-primary-dark transition-colors group/link"
+              className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-brand-primary hover:text-brand-primary-dark transition-colors group/link"
             >
               Lihat semua kategori
               <span className="inline-block transition-transform group-hover/link:translate-x-1">→</span>
@@ -128,18 +104,18 @@ export default function HomePage() {
                 <Link
                   key={cat.id}
                   href={`/produk?kategori=${cat.slug}`}
-                  className="group relative flex flex-col items-center text-center p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200 hover:border-nu-primary/30 hover:shadow-lg hover:shadow-nu-primary/5 transition-all duration-300 overflow-hidden"
+                  className="group relative flex flex-col items-center text-center p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200 hover:border-brand-primary/30 hover:shadow-lg hover:shadow-brand-primary/5 transition-all duration-300 overflow-hidden"
                 >
                   {/* Quarter-circle decoration */}
-                  <div className="absolute -bottom-5 -right-5 w-18 h-18 rounded-tl-[32px] bg-gradient-to-tl from-nu-primary/[0.05] to-transparent group-hover:from-nu-primary/[0.10] transition-colors duration-500" />
+                  <div className="absolute -bottom-5 -right-5 w-18 h-18 rounded-tl-[32px] bg-gradient-to-tl from-brand-primary/[0.05] to-transparent group-hover:from-brand-primary/[0.10] transition-colors duration-500" />
 
                   {/* Icon */}
-                  <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-nu-primary/5 to-nu-secondary/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:from-nu-primary/10 group-hover:to-nu-secondary/10 transition-all duration-300">
-                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-nu-primary group-hover:text-nu-primary-dark transition-colors" />
+                  <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:from-brand-primary/10 group-hover:to-brand-secondary/10 transition-all duration-300">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-brand-primary group-hover:text-brand-primary-dark transition-colors" />
                   </div>
 
                   {/* Name */}
-                  <h3 className="relative z-10 text-sm sm:text-base font-bold text-neutral-800 mb-1 group-hover:text-nu-primary transition-colors leading-snug">
+                  <h3 className="relative z-10 text-sm sm:text-base font-bold text-neutral-800 mb-1 group-hover:text-brand-primary transition-colors leading-snug">
                     {cat.name}
                   </h3>
 
@@ -156,7 +132,7 @@ export default function HomePage() {
           <div className="mt-6 text-center md:hidden">
             <Link
               href="/produk"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-nu-primary"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary"
             >
               Lihat semua kategori →
             </Link>
@@ -183,7 +159,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/produk"
-              className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-nu-primary hover:text-nu-primary-dark transition-colors group/link"
+              className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-brand-primary hover:text-brand-primary-dark transition-colors group/link"
             >
               Lihat semua produk
               <span className="inline-block transition-transform group-hover/link:translate-x-1">→</span>
@@ -209,11 +185,11 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/25 to-transparent" />
                   {/* Gold glow on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-nu-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Top badge */}
                   <div className="absolute top-5 left-5">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-nu-secondary/90 backdrop-blur-md px-3.5 py-1 text-xs font-bold text-white shadow-lg shadow-nu-secondary/20">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-secondary/90 backdrop-blur-md px-3.5 py-1 text-xs font-bold text-white shadow-lg shadow-brand-secondary/20">
                       <Star className="w-3 h-3 fill-white" />
                       Produk Unggulan
                     </span>
@@ -228,7 +204,7 @@ export default function HomePage() {
                         {Array.from({ length: 5 }).map((_, i) => (
                           <Star
                             key={i}
-                            className={`w-3.5 h-3.5 ${i < Math.floor(hero.rating) ? "fill-nu-secondary text-nu-secondary" : "text-white/20"}`}
+                            className={`w-3.5 h-3.5 ${i < Math.floor(hero.rating) ? "fill-brand-secondary text-brand-secondary" : "text-white/20"}`}
                           />
                         ))}
                         <span className="text-xs text-white/60 ml-1">({hero.reviewCount})</span>
@@ -243,7 +219,7 @@ export default function HomePage() {
                     <div className="flex items-end justify-between">
                       <div>
                         <p className="text-xs text-white/50">Harga per rim</p>
-                        <p className="text-2xl font-bold text-nu-secondary">
+                        <p className="text-2xl font-bold text-brand-secondary">
                           Rp {hero.price.toLocaleString("id-ID")}
                         </p>
                         {hero.priceGrosir && (
@@ -252,7 +228,7 @@ export default function HomePage() {
                           </p>
                         )}
                       </div>
-                      <span className="inline-flex items-center gap-2 text-sm font-semibold text-white group-hover:text-nu-secondary transition-colors">
+                      <span className="inline-flex items-center gap-2 text-sm font-semibold text-white group-hover:text-brand-secondary transition-colors">
                         Lihat Detail
                         <span className="inline-block transition-transform group-hover:translate-x-1.5">→</span>
                       </span>
@@ -277,12 +253,12 @@ export default function HomePage() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/20 to-transparent" />
-                <div className="absolute inset-0 bg-nu-secondary/0 group-hover:bg-nu-secondary/5 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-brand-secondary/0 group-hover:bg-brand-secondary/5 transition-colors duration-500" />
 
                 {/* Gold badge on hover */}
                 <div className="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-white/15 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-semibold text-nu-secondary">
-                    <Star className="w-2.5 h-2.5 fill-nu-secondary" />
+                  <span className="inline-flex items-center gap-1 rounded-full bg-white/15 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-semibold text-brand-secondary">
+                    <Star className="w-2.5 h-2.5 fill-brand-secondary" />
                     Unggulan
                   </span>
                 </div>
@@ -299,12 +275,12 @@ export default function HomePage() {
                       {Array.from({ length: 5 }).map((_, i) => (
                         <Star
                           key={i}
-                          className={`w-3 h-3 ${i < Math.floor(product.rating) ? "fill-nu-secondary text-nu-secondary" : "text-white/20"}`}
+                          className={`w-3 h-3 ${i < Math.floor(product.rating) ? "fill-brand-secondary text-brand-secondary" : "text-white/20"}`}
                         />
                       ))}
                       <span className="text-[10px] text-white/50 ml-1">({product.reviewCount})</span>
                     </div>
-                    <span className="text-sm font-bold text-nu-secondary">
+                    <span className="text-sm font-bold text-brand-secondary">
                       Rp {product.price.toLocaleString("id-ID")}
                     </span>
                   </div>
@@ -317,7 +293,7 @@ export default function HomePage() {
           <div className="mt-8 text-center md:hidden">
             <Link
               href="/produk"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-nu-primary"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary"
             >
               Lihat semua produk →
             </Link>
@@ -332,7 +308,7 @@ export default function HomePage() {
       <section className="section-padding bg-neutral-50 overflow-hidden">
         <div className="container-page">
           <div className="text-center mb-10">
-            <span className="inline-flex items-center rounded-full bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-nu-primary shadow-sm mb-4">
+            <span className="inline-flex items-center rounded-full bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-primary shadow-sm mb-4">
               Suara Pesantren
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-neutral-800 mb-3">
@@ -368,7 +344,7 @@ export default function HomePage() {
                   &ldquo;{t.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-3 border-t border-neutral-100 pt-4">
-                  <div className="w-11 h-11 bg-nu-primary-light rounded-full flex items-center justify-center text-nu-primary font-bold text-sm shrink-0">
+                  <div className="w-11 h-11 bg-brand-primary-light rounded-full flex items-center justify-center text-brand-primary font-bold text-sm shrink-0">
                     {t.name.charAt(0)}
                   </div>
                   <div>
@@ -399,7 +375,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-nu-primary">
+      <section className="section-padding bg-brand-primary">
         <div className="container-page text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
             Siap Bergabung?
@@ -421,7 +397,7 @@ export default function HomePage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-nu-primary"
+                className="border-white text-white hover:bg-white hover:text-brand-primary"
               >
                 Jelajahi Produk
               </Button>

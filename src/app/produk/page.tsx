@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { SITE_NAME } from "@/lib/constants";
 import KatalogPage from "./KatalogPage";
@@ -9,5 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <KatalogPage />;
+  return (
+    <Suspense fallback={<div className="container-page py-16 text-center text-neutral-500">Memuat katalog...</div>}>
+      <KatalogPage />
+    </Suspense>
+  );
 }

@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, School } from "lucide-react";
 import { FOOTER_LINKS } from "@/lib/constants";
 
 export function Footer() {
@@ -11,32 +10,25 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="relative w-9 h-9 rounded-lg overflow-hidden bg-white flex items-center justify-center">
-                <Image
-                  src="/nahdlatululama.png"
-                  alt="Logo Nahdlatul Ulama"
-                  fill
-                  className="object-contain p-1"
-                  sizes="36px"
-                />
+              <div className="w-9 h-9 rounded-lg bg-brand-primary flex items-center justify-center text-white shadow-sm">
+                <School className="w-5 h-5" aria-hidden="true" />
               </div>
-              <span className="font-semibold text-white text-sm">Marketplace NU</span>
+              <span className="font-semibold text-white text-sm">Toko Ponpes</span>
             </div>
             <p className="text-sm leading-relaxed mb-4">
-              Platform marketplace resmi Nahdlatul Ulama, menghubungkan Pondok Pesantren dengan mitra
-              terpercaya untuk kebutuhan operasional.
+              Marketplace Pondok Pesantren di seluruh Indonesia, menghubungkan kebutuhan operasional dengan mitra terpercaya.
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm">
-                <Mail className="w-4 h-4 text-nu-secondary shrink-0" />
+                <Mail className="w-4 h-4 text-brand-secondary shrink-0" />
                 <span>{FOOTER_LINKS.kontak.email}</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                <Phone className="w-4 h-4 text-nu-secondary shrink-0" />
+                <Phone className="w-4 h-4 text-brand-secondary shrink-0" />
                 <span>{FOOTER_LINKS.kontak.phone}</span>
               </div>
               <div className="flex items-start gap-2 text-sm">
-                <MapPin className="w-4 h-4 text-nu-secondary shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-brand-secondary shrink-0 mt-0.5" />
                 <span>{FOOTER_LINKS.kontak.address}</span>
               </div>
             </div>
@@ -50,7 +42,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-neutral-400 hover:text-nu-secondary transition-colors"
+                    className="text-sm text-neutral-400 hover:text-brand-secondary transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -67,7 +59,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-neutral-400 hover:text-nu-secondary transition-colors"
+                    className="text-sm text-neutral-400 hover:text-brand-secondary transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -84,7 +76,7 @@ export function Footer() {
               <p className="text-xs text-neutral-400">Mitra Terpercaya</p>
               <Link
                 href="/mitra"
-                className="inline-block mt-3 text-xs text-nu-secondary hover:text-nu-secondary-dark transition-colors font-medium"
+                className="inline-block mt-3 text-xs text-brand-secondary hover:text-brand-secondary-dark transition-colors font-medium"
               >
                 Lihat Semua Mitra →
               </Link>
@@ -95,10 +87,11 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-neutral-700 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-neutral-500">
-            © {new Date().getFullYear()} Marketplace NU — Nahdlatul Ulama. Seluruh hak cipta dilindungi.
+            © {new Date().getFullYear()} Toko Ponpes. Seluruh hak cipta dilindungi.
           </p>
           <p className="text-xs text-neutral-500">
-            Didukung oleh <span className="text-nu-secondary font-medium">Intan Pariwara</span>
+            Didukung oleh{" "}
+            <span className="text-brand-secondary font-medium">Intan Pariwara</span>
           </p>
         </div>
       </div>

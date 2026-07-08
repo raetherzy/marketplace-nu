@@ -45,7 +45,7 @@ export default function ProfilPage() {
     <div className="container-page section-padding">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-sm text-neutral-400 mb-6">
-        <Link href="/" className="hover:text-nu-primary">
+        <Link href="/" className="hover:text-brand-primary">
           Beranda
         </Link>
         <span>/</span>
@@ -56,7 +56,7 @@ export default function ProfilPage() {
         {/* Sidebar: Profile Card */}
         <div className="lg:col-span-1 space-y-6">
           <div className="bg-white rounded-xl border border-neutral-200 p-6 text-center">
-            <div className="w-24 h-24 bg-nu-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-24 h-24 bg-brand-primary rounded-full flex items-center justify-center mx-auto mb-4">
               <User className="w-12 h-12 text-white" />
             </div>
             <h2 className="font-bold text-neutral-800">{profile.name}</h2>
@@ -82,14 +82,14 @@ export default function ProfilPage() {
             </h3>
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-3">
-                <Building2 className="w-4 h-4 text-nu-primary mt-0.5 shrink-0" />
+                <Building2 className="w-4 h-4 text-brand-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-neutral-400 text-xs">Nama Pesantren</p>
                   <p className="text-neutral-700">{profile.name}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-nu-primary mt-0.5 shrink-0" />
+                <MapPin className="w-4 h-4 text-brand-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-neutral-400 text-xs">Alamat</p>
                   <p className="text-neutral-700">
@@ -98,21 +98,21 @@ export default function ProfilPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-nu-primary mt-0.5 shrink-0" />
+                <Phone className="w-4 h-4 text-brand-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-neutral-400 text-xs">Telepon</p>
                   <p className="text-neutral-700">{profile.phone}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-nu-primary mt-0.5 shrink-0" />
+                <Mail className="w-4 h-4 text-brand-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-neutral-400 text-xs">Email</p>
                   <p className="text-neutral-700">{profile.email}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <User className="w-4 h-4 text-nu-primary mt-0.5 shrink-0" />
+                <User className="w-4 h-4 text-brand-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-neutral-400 text-xs">Pimpinan</p>
                   <p className="text-neutral-700">{profile.headName}</p>
@@ -153,8 +153,8 @@ export default function ProfilPage() {
                   key={stat.label}
                   className="bg-white rounded-xl border border-neutral-200 p-4"
                 >
-                  <div className="w-9 h-9 bg-nu-primary-light rounded-lg flex items-center justify-center mb-2">
-                    <Icon className="w-4 h-4 text-nu-primary" />
+                  <div className="w-9 h-9 bg-brand-primary-light rounded-lg flex items-center justify-center mb-2">
+                    <Icon className="w-4 h-4 text-brand-primary" />
                   </div>
                   <p className={`font-bold text-neutral-800 ${stat.isCurrency ? "text-sm" : "text-xl"}`}>
                     {stat.value}
@@ -184,7 +184,7 @@ export default function ProfilPage() {
                   <Link
                     key={order.id}
                     href={`/pesanan/${order.id}`}
-                    className="block border border-neutral-200 rounded-xl p-4 hover:border-nu-primary hover:shadow-sm transition-all"
+                    className="block border border-neutral-200 rounded-xl p-4 hover:border-brand-primary hover:shadow-sm transition-all"
                   >
                     <div className="flex items-start justify-between mb-3">
                       <div>
@@ -220,11 +220,11 @@ export default function ProfilPage() {
                     <div className="flex items-center justify-between pt-3 border-t">
                       <div>
                         <p className="text-xs text-neutral-400">Total</p>
-                        <p className="font-bold text-nu-primary">
+                        <p className="font-bold text-brand-primary">
                           {formatCurrency(order.total)}
                         </p>
                       </div>
-                      <span className="text-sm text-nu-primary font-medium flex items-center gap-1">
+                      <span className="text-sm text-brand-primary font-medium flex items-center gap-1">
                         Detail
                         <ChevronRight className="w-4 h-4" />
                       </span>

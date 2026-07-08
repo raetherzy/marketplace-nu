@@ -14,9 +14,9 @@ import {
 import { Button } from "@/components/ui/Button";
 
 export const metadata = {
-  title: "Tentang Marketplace NU",
+  title: "Tentang Toko Ponpes",
   description:
-    "Marketplace NU - Platform belanja online khusus untuk Pondok Pesantren di seluruh Indonesia. Dukung ekonomi umat dengan produk berkualitas.",
+    "Toko Ponpes - Platform belanja online khusus untuk Pondok Pesantren di seluruh Indonesia. Dukung ekonomi umat dengan produk berkualitas.",
 };
 
 export default function TentangPage() {
@@ -52,8 +52,8 @@ export default function TentangPage() {
 
   const faqs = [
     {
-      q: "Siapa yang bisa berbelanja di Marketplace NU?",
-      a: "Marketplace NU dirancang khusus untuk Pondok Pesantren, lembaga pendidikan Islam, dan jamaah NU di seluruh Indonesia. Pendaftaran akun menggunakan NPSN pesantren untuk verifikasi.",
+      q: "Siapa yang bisa berbelanja di Toko Ponpes?",
+      a: "Toko Ponpes dirancang khusus untuk Pondok Pesantren, lembaga pendidikan Islam, dan komunitas pesantren di seluruh Indonesia. Pendaftaran akun menggunakan NPSN pesantren untuk verifikasi.",
     },
     {
       q: "Bagaimana proses pemesanan dalam jumlah besar (grosir)?",
@@ -68,7 +68,7 @@ export default function TentangPage() {
       a: "Kami menerima pembayaran melalui transfer bank (BCA, BNI, Mandiri, BRI), e-wallet (OVO, DANA, GoPay), dan Cash on Delivery (COD) untuk area tertentu.",
     },
     {
-      q: "Siapa mitra utama Marketplace NU saat ini?",
+      q: "Siapa mitra utama Toko Ponpes saat ini?",
       a: "Saat ini mitra utama kami adalah Intan Pariwara, distributor perlengkapan pendidikan bersertifikat ISO 9001:2015, SNI, dan Halal. Kami akan terus menambah mitra terpercaya lainnya.",
     },
   ];
@@ -76,13 +76,13 @@ export default function TentangPage() {
   return (
     <div>
       {/* Hero */}
-      <div className="bg-gradient-to-br from-nu-primary to-green-800 text-white">
+      <div className="bg-gradient-to-br from-brand-primary to-green-800 text-white">
         <div className="container-page py-16 lg:py-24 text-center">
           <div className="inline-block px-4 py-1.5 bg-white/10 rounded-full text-sm mb-6 backdrop-blur-sm">
             Bersama Memajukan Ekonomi Pesantren
           </div>
           <h1 className="text-3xl lg:text-5xl font-bold mb-4">
-            Tentang Marketplace NU
+            Tentang Toko Ponpes
           </h1>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
             Platform belanja online khusus untuk Pondok Pesantren di seluruh
@@ -100,7 +100,7 @@ export default function TentangPage() {
               key={stat.label}
               className="bg-white rounded-xl border border-neutral-200 p-6 text-center shadow-sm"
             >
-              <p className="text-2xl lg:text-3xl font-bold text-nu-primary">
+              <p className="text-2xl lg:text-3xl font-bold text-brand-primary">
                 {stat.value}
               </p>
               <p className="text-sm text-neutral-400 mt-1">{stat.label}</p>
@@ -113,8 +113,8 @@ export default function TentangPage() {
       <div className="container-page section-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl border border-neutral-200 p-8">
-            <div className="w-12 h-12 bg-nu-primary-light rounded-xl flex items-center justify-center mb-4">
-              <Eye className="w-6 h-6 text-nu-primary" />
+            <div className="w-12 h-12 bg-brand-primary-light rounded-xl flex items-center justify-center mb-4">
+              <Eye className="w-6 h-6 text-brand-primary" />
             </div>
             <h2 className="text-xl font-bold text-neutral-800 mb-3">
               Visi Kami
@@ -128,8 +128,8 @@ export default function TentangPage() {
           </div>
 
           <div className="bg-white rounded-xl border border-neutral-200 p-8">
-            <div className="w-12 h-12 bg-nu-secondary-light rounded-xl flex items-center justify-center mb-4">
-              <Target className="w-6 h-6 text-nu-secondary-dark" />
+            <div className="w-12 h-12 bg-brand-secondary-light rounded-xl flex items-center justify-center mb-4">
+              <Target className="w-6 h-6 text-brand-secondary-dark" />
             </div>
             <h2 className="text-xl font-bold text-neutral-800 mb-3">
               Misi Kami
@@ -142,7 +142,7 @@ export default function TentangPage() {
                 "Memberikan layanan terbaik dengan pemahaman kebutuhan pesantren",
               ].map((misi) => (
                 <li key={misi} className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-nu-primary shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-primary shrink-0 mt-0.5" />
                   <span className="text-sm">{misi}</span>
                 </li>
               ))}
@@ -168,8 +168,8 @@ export default function TentangPage() {
                   key={value.title}
                   className="bg-white rounded-xl border border-neutral-200 p-6 text-center hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-14 h-14 bg-nu-primary-light rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-7 h-7 text-nu-primary" />
+                  <div className="w-14 h-14 bg-brand-primary-light rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-7 h-7 text-brand-primary" />
                   </div>
                   <h3 className="font-semibold text-neutral-800 mb-2">
                     {value.title}
@@ -182,7 +182,7 @@ export default function TentangPage() {
         </div>
 
         {/* How It Works */}
-        <div className="bg-nu-primary-light/30 rounded-2xl p-8 lg:p-12 mb-16">
+        <div className="bg-brand-primary-light/30 rounded-2xl p-8 lg:p-12 mb-16">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-bold text-neutral-800 mb-2">
               Cara Kerja
@@ -222,8 +222,8 @@ export default function TentangPage() {
               return (
                 <div key={item.step} className="text-center relative">
                   <div className="relative w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm">
-                    <Icon className="w-8 h-8 text-nu-primary" />
-                    <span className="absolute -top-2 -right-2 w-7 h-7 bg-nu-primary text-white text-sm font-bold rounded-full flex items-center justify-center">
+                    <Icon className="w-8 h-8 text-brand-primary" />
+                    <span className="absolute -top-2 -right-2 w-7 h-7 bg-brand-primary text-white text-sm font-bold rounded-full flex items-center justify-center">
                       {item.step}
                     </span>
                   </div>
@@ -255,7 +255,7 @@ export default function TentangPage() {
               >
                 <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                   <span className="font-medium text-neutral-800">{faq.q}</span>
-                  <span className="text-nu-primary transition-transform group-open:rotate-45">
+                  <span className="text-brand-primary transition-transform group-open:rotate-45">
                     +
                   </span>
                 </summary>
@@ -268,7 +268,7 @@ export default function TentangPage() {
         </div>
 
         {/* CTA */}
-        <div className="bg-gradient-to-br from-nu-primary to-green-800 rounded-2xl p-8 lg:p-12 text-center text-white">
+        <div className="bg-gradient-to-br from-brand-primary to-green-800 rounded-2xl p-8 lg:p-12 text-center text-white">
           <HandshakeIcon className="w-16 h-16 mx-auto mb-4 text-white/80" />
           <h2 className="text-2xl lg:text-3xl font-bold mb-3">
             Siap Bergabung?

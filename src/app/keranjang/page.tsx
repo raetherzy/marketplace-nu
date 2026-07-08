@@ -46,7 +46,7 @@ export default function KeranjangPage() {
     <div className="container-page section-padding">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-sm text-neutral-400 mb-6">
-        <Link href="/" className="hover:text-nu-primary">
+        <Link href="/" className="hover:text-brand-primary">
           Beranda
         </Link>
         <span>/</span>
@@ -90,7 +90,7 @@ export default function KeranjangPage() {
                   <div className="flex items-start justify-between gap-2">
                     <div>
                       <Link href={`/produk/${item.product.id}`}>
-                        <h3 className="font-semibold text-neutral-800 hover:text-nu-primary transition-colors line-clamp-2">
+                        <h3 className="font-semibold text-neutral-800 hover:text-brand-primary transition-colors line-clamp-2">
                           {item.product.name}
                         </h3>
                       </Link>
@@ -136,7 +136,7 @@ export default function KeranjangPage() {
                     </div>
 
                     <div className="text-right">
-                      <p className="font-bold text-nu-primary">
+                      <p className="font-bold text-brand-primary">
                         {formatCurrency(itemTotal)}
                       </p>
                       {isGrosir && (
@@ -181,8 +181,8 @@ export default function KeranjangPage() {
                 </span>
               </div>
               {subtotal < 500000 && (
-                <div className="bg-nu-secondary-light rounded-lg p-3">
-                  <p className="text-xs text-nu-secondary-dark">
+                <div className="bg-brand-secondary-light rounded-lg p-3">
+                  <p className="text-xs text-brand-secondary-dark">
                     Belanja lagi{" "}
                     <span className="font-bold">
                       {formatCurrency(500000 - subtotal)}
@@ -195,7 +195,7 @@ export default function KeranjangPage() {
                 <span className="font-semibold text-neutral-800">
                   Total Tagihan
                 </span>
-                <span className="font-bold text-nu-primary text-lg">
+                <span className="font-bold text-brand-primary text-lg">
                   {formatCurrency(total)}
                 </span>
               </div>
@@ -210,7 +210,7 @@ export default function KeranjangPage() {
 
             <Link
               href="/produk"
-              className="block text-center text-sm text-nu-primary font-medium mt-3 hover:underline"
+              className="block text-center text-sm text-brand-primary font-medium mt-3 hover:underline"
             >
               Lanjut Belanja
             </Link>

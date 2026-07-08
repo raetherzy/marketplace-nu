@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useSearchParams } from "next/navigation";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import { ProductCard } from "@/components/product/ProductCard";
 import { Button } from "@/components/ui/Button";
@@ -43,7 +44,7 @@ function FilterContent({
           placeholder="Cari produk..."
           value={search}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="w-full pl-10 pr-4 py-2.5 text-sm border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-nu-primary/30 focus:border-nu-primary"
+          className="w-full pl-10 pr-4 py-2.5 text-sm border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary"
         />
       </div>
 
@@ -59,7 +60,7 @@ function FilterContent({
               }
               className={`w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
                 selectedCategory === cat.id
-                  ? "bg-nu-primary text-white font-medium"
+                  ? "bg-brand-primary text-white font-medium"
                   : "text-neutral-600 hover:bg-neutral-100"
               }`}
             >
@@ -83,7 +84,7 @@ function FilterContent({
               onClick={() => onStockChange(opt.value)}
               className={`w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
                 selectedStock === opt.value
-                  ? "bg-nu-primary text-white font-medium"
+                  ? "bg-brand-primary text-white font-medium"
                   : "text-neutral-600 hover:bg-neutral-100"
               }`}
             >
@@ -104,7 +105,7 @@ function FilterContent({
             onChange={(e) =>
               onPriceRangeChange([Number(e.target.value), priceRange[1]])
             }
-            className="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-nu-primary/30 focus:border-nu-primary"
+            className="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary"
           />
           <span className="text-neutral-400">—</span>
           <input
@@ -114,7 +115,7 @@ function FilterContent({
             onChange={(e) =>
               onPriceRangeChange([priceRange[0], Number(e.target.value)])
             }
-            className="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-nu-primary/30 focus:border-nu-primary"
+            className="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary"
           />
         </div>
       </div>
@@ -130,7 +131,8 @@ function FilterContent({
 }
 
 export default function KatalogPage() {
-  const [search, setSearch] = useState("");
+  const searchParams = useSearchParams();
+  const [search, setSearch] = useState(searchParams.get("q") || "");
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [selectedStock, setSelectedStock] = useState<string>("");
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 100000]);
@@ -208,7 +210,7 @@ export default function KatalogPage() {
     <div className="container-page section-padding">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-sm text-neutral-400 mb-6">
-        <a href="/" className="hover:text-nu-primary">
+        <a href="/" className="hover:text-brand-primary">
           Beranda
         </a>
         <span>/</span>
@@ -255,7 +257,7 @@ export default function KatalogPage() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as SortOption)}
-                className="px-3 py-2 text-sm border border-neutral-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-nu-primary/30 focus:border-nu-primary"
+                className="px-3 py-2 text-sm border border-neutral-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary"
               >
                 <option value="terbaru">Terbaru</option>
                 <option value="harga-rendah">Harga: Rendah → Tinggi</option>

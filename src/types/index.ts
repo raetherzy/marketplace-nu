@@ -86,3 +86,14 @@ export interface Order {
   createdAt: string;
   estimatedDelivery: string;
 }
+
+export interface Review {
+  id: string;
+  userName: string;
+  pesantren: string;
+  avatar: string;
+  rating: number;
+  text: string;
+  date: string;
+  helpful: number;
+}

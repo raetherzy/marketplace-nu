@@ -428,7 +428,7 @@ export const partners: Partner[] = [
     slug: "intan-pariwara",
     logo: "/intanpariwara.png",
     description:
-      "Intan Pariwara adalah partner NU dalam penyediaan perlengkapan pendidikan untuk Pondok Pesantren di seluruh Indonesia. Berpengalaman lebih dari 30 tahun dalam industri alat tulis dan percetakan, Intan Pariwara berkomitmen menyediakan produk berkualitas dengan harga terjangkau bagi komunitas pesantren.",
+      "Intan Pariwara adalah partner utama dalam penyediaan perlengkapan pendidikan untuk Pondok Pesantren di seluruh Indonesia. Berpengalaman lebih dari 30 tahun dalam industri alat tulis dan percetakan, Intan Pariwara berkomitmen menyediakan produk berkualitas dengan harga terjangkau bagi komunitas pesantren.",
     certifications: ["ISO 9001:2015", "SNI", "Halal Certified"],
     categoryNames: ["Kertas HVS", "Kertas Buram", "Buku Tulis", "Buku Gambar", "Karton"],
     productCount: 15,
@@ -443,7 +443,7 @@ export const partners: Partner[] = [
     id: "al-hikmah-printing",
     name: "Al-Hikmah Printing",
     slug: "al-hikmah-printing",
-    logo: "/nahdlatululama.png",
+    logo: "/intanpariwara.png",
     description:
       "Percetakan Al-Hikmah menyediakan layanan cetak kitab, modul ajar, dan buku pelajaran pesantren dengan kualitas premium. Berpengalaman melayani pesantren-pesantren di Jawa Tengah dan Jawa Timur.",
     certifications: ["SNI", "Halal Certified"],
@@ -460,7 +460,7 @@ export const partners: Partner[] = [
     id: "barokah-stationery",
     name: "Barokah Stationery",
     slug: "barokah-stationery",
-    logo: "/nahdlatululama.png",
+    logo: "/intanpariwara.png",
     description:
       "Distributor alat tulis dan perlengkapan kantor pesantren terlengkap di Jawa Barat. Menyediakan produk dari berbagai brand ternama dengan harga khusus pesantren.",
     certifications: [],
@@ -477,7 +477,7 @@ export const partners: Partner[] = [
     id: "nurul-ilmu-publisher",
     name: "Nurul Ilmu Publisher",
     slug: "nurul-ilmu-publisher",
-    logo: "/nahdlatululama.png",
+    logo: "/intanpariwara.png",
     description:
       "Penerbit buku-buku pendidikan Islam dan kitab kuning untuk pesantren. Menyediakan buku ajar, modul pembelajaran, dan referensi keislaman dengan standar kualitas tinggi.",
     certifications: ["SNI", "Halal Certified"],
@@ -494,7 +494,7 @@ export const partners: Partner[] = [
     id: "amanah-edu-supply",
     name: "Amanah Edu Supply",
     slug: "amanah-edu-supply",
-    logo: "/nahdlatululama.png",
+    logo: "/intanpariwara.png",
     description:
       "Pemasok perlengkapan pendidikan dan alat peraga pesantren modern. Menyediakan solusi lengkap untuk kebutuhan ruang kelas, asrama, dan administrasi pesantren.",
     certifications: ["ISO 9001:2015"],
@@ -516,7 +516,7 @@ export const testimonials: Testimonial[] = [
     role: "Bendahara",
     pesantren: "Pondok Pesantren Al-Hikmah, Jombang",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-    text: "Alhamdulillah, dengan Marketplace NU, pengadaan alat tulis pesantren jadi lebih mudah. Harga transparan dan pengiriman cepat. Sangat membantu administrasi kami.",
+    text: "Alhamdulillah, dengan Toko Ponpes, pengadaan alat tulis pesantren jadi lebih mudah. Harga transparan dan pengiriman cepat. Sangat membantu administrasi kami.",
     rating: 5,
   },
   {
@@ -543,7 +543,7 @@ export const testimonials: Testimonial[] = [
     role: "Ketua Yayasan",
     pesantren: "Pondok Pesantren Al-Falah, Kediri",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-    text: "Marketplace NU menjadi solusi nyata bagi pesantren kami. Hemat waktu, hemat biaya, dan produk selalu tersedia. Terima kasih NU!",
+    text: "Toko Ponpes menjadi solusi nyata bagi pesantren kami. Hemat waktu, hemat biaya, dan produk selalu tersedia. Terima kasih!",
     rating: 5,
   },
   {
@@ -570,7 +570,7 @@ export const testimonials: Testimonial[] = [
     role: "Pimpinan",
     pesantren: "Pondok Pesantren Al-Barokah, Cirebon",
     avatar: "https://images.unsplash.com/photo-1566492031773-4f4e44617d582?w=100&h=100&fit=crop&crop=face",
-    text: "Inisiatif bagus dari NU. Kami tidak perlu lagi repot mencari supplier ke kota. Semua kebutuhan alat tulis santri tersedia lengkap di satu platform.",
+    text: "Inisiatif dari Toko Ponpes. Kami tidak perlu lagi repot mencari supplier ke kota. Semua kebutuhan alat tulis santri tersedia lengkap di satu platform.",
     rating: 5,
   },
   {
@@ -636,5 +636,58 @@ export const dummyOrders: Order[] = [
     shipping: 35000,
     createdAt: "2026-06-20",
     estimatedDelivery: "2026-06-25",
+  },
+];
+
+export const dummyReviews: import("@/types").Review[] = [
+  {
+    id: "r1",
+    userName: "Ahmad Fauzi",
+    pesantren: "PP Al-Hikmah Jombang",
+    avatar: "",
+    rating: 5,
+    text: "Kertas HVS-nya berkualitas bagus, putih bersih, tidak mudah sobek. Cocok untuk kebutuhan ujian dan materi ajar di pesantren kami. Pengiriman cepat dan packing aman.",
+    date: "12 Juni 2026",
+    helpful: 12,
+  },
+  {
+    id: "r2",
+    userName: "Nurul Hidayah",
+    pesantren: "PP Darussalam Gontor",
+    avatar: "",
+    rating: 4,
+    text: "Buku tulisnya rapi, jilid kuat. Harga grosir cukup terjangkau untuk pesanan dalam jumlah besar. Saran: tambah variasi cover biar lebih menarik.",
+    date: "5 Juni 2026",
+    helpful: 8,
+  },
+  {
+    id: "r3",
+    userName: "KH. Mustofa",
+    pesantren: "PP Lirboyo Kediri",
+    avatar: "",
+    rating: 5,
+    text: "Sudah 3 kali pesan di Toko Ponpes. Pelayanan ramah, produk sesuai deskripsi. Kertas buram untuk kitab kuning sangat memuaskan. Barokallah!",
+    date: "28 Mei 2026",
+    helpful: 15,
+  },
+  {
+    id: "r4",
+    userName: "Siti Aisyah",
+    pesantren: "PP Al-Munawwir Krapyak",
+    avatar: "",
+    rating: 4,
+    text: "Karton manila tebal dan kokoh, bagus untuk bahan ajar dan dekorasi kelas. Harga sedikit di atas pasaran tapi sebanding dengan kualitas.",
+    date: "15 Mei 2026",
+    helpful: 6,
+  },
+  {
+    id: "r5",
+    userName: "Ust. Rahman Hakim",
+    pesantren: "PP Al-Anwar Sarang",
+    avatar: "",
+    rating: 5,
+    text: "Buku gambar kualitas terbaik. Kertas tebal 150gsm, tidak tembus saat pakai spidol. Santri-santri senang. InsyaAllah jadi langganan tetap.",
+    date: "3 Mei 2026",
+    helpful: 10,
   },
 ];

@@ -1,7 +1,7 @@
-export const SITE_NAME = "Marketplace NU";
+export const SITE_NAME = "Toko Ponpes";
 export const SITE_DESCRIPTION =
-  "Platform marketplace resmi Nahdlatul Ulama untuk Pondok Pesantren di seluruh Indonesia. Mitra resmi: Intan Pariwara.";
-export const SITE_URL = "https://marketplace.nu.or.id";
+  "Marketplace untuk Pondok Pesantren di seluruh Indonesia. Temukan kebutuhan operasional, alat tulis, perlengkapan ibadah, dan produk terpercaya dari mitra pilihan.";
+export const SITE_URL = "https://tokoponpes.id";
 
 export const NAV_LINKS = [
   { label: "Beranda", href: "/" },
@@ -24,9 +24,14 @@ export const FOOTER_LINKS = {
     { label: "Pengembalian", href: "#" },
   ],
   kontak: {
-    email: "marketplace@nu.or.id",
+    email: "halo@tokoponpes.id",
     phone: "+62 812-3456-7890",
     wa: "6281234567890",
-    address: "Gedung PBNU, Jl. Kramat Raya No.164, Jakarta Pusat",
+    address: "Indonesia",
+  },
+  sosial: {
+    instagram: "https://instagram.com/tokoponpes",
+    facebook: "https://facebook.com/tokoponpes",
+    youtube: "https://youtube.com/@tokoponpes",
   },
 } as const;

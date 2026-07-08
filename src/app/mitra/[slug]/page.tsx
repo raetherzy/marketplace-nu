@@ -42,7 +42,7 @@ export default function MitraPage({ params }: PageProps) {
   return (
     <div>
       {/* Hero */}
-      <div className="bg-gradient-to-br from-nu-primary to-green-800 text-white">
+      <div className="bg-gradient-to-br from-brand-primary to-green-800 text-white">
         <div className="container-page py-16 lg:py-20">
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="relative w-32 h-32 lg:w-40 lg:h-40 rounded-2xl overflow-hidden bg-white flex items-center justify-center">
@@ -56,7 +56,7 @@ export default function MitraPage({ params }: PageProps) {
             </div>
             <div className="text-center lg:text-left">
               <Badge className="bg-white/20 text-white border-white/30 mb-3">
-                Partner NU
+                Partner Pesantren
               </Badge>
               <h1 className="text-3xl lg:text-4xl font-bold mb-3">
                 {partner.name}
@@ -111,14 +111,14 @@ export default function MitraPage({ params }: PageProps) {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Phone className="w-4 h-4 text-nu-primary mt-0.5" />
+                  <Phone className="w-4 h-4 text-brand-primary mt-0.5" />
                   <div>
                     <p className="text-xs text-neutral-400">Telepon</p>
                     <p className="text-sm text-neutral-700">{partner.contact.phone}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="w-4 h-4 text-nu-primary mt-0.5" />
+                  <Mail className="w-4 h-4 text-brand-primary mt-0.5" />
                   <div>
                     <p className="text-xs text-neutral-400">Email</p>
                     <p className="text-sm text-neutral-700">{partner.contact.email}</p>
@@ -134,7 +134,7 @@ export default function MitraPage({ params }: PageProps) {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-nu-primary mt-0.5" />
+                  <MapPin className="w-4 h-4 text-brand-primary mt-0.5" />
                   <div>
                     <p className="text-xs text-neutral-400">Alamat</p>
                     <p className="text-sm text-neutral-700">
@@ -176,7 +176,7 @@ export default function MitraPage({ params }: PageProps) {
               </h2>
               <Link
                 href="/produk"
-                className="text-sm text-nu-primary font-medium flex items-center gap-1 hover:underline"
+                className="text-sm text-brand-primary font-medium flex items-center gap-1 hover:underline"
               >
                 Lihat Semua
                 <ChevronRight className="w-4 h-4" />

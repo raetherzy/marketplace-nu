@@ -46,14 +46,14 @@ export default function DaftarPage() {
         <div className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-nu-primary-light rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <UserPlus className="w-8 h-8 text-nu-primary" />
+            <div className="w-16 h-16 bg-brand-primary-light rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <UserPlus className="w-8 h-8 text-brand-primary" />
             </div>
             <h1 className="text-2xl font-bold text-neutral-800">
               Daftar Akun Pesantren
             </h1>
             <p className="text-sm text-neutral-400 mt-1">
-              Bergabung dengan Marketplace NU untuk kebutuhan pesantren Anda
+              Bergabung dengan Toko Ponpes untuk kebutuhan pesantren Anda
             </p>
           </div>
 
@@ -61,7 +61,7 @@ export default function DaftarPage() {
             {/* Pesantren Info */}
             <div className="space-y-4">
               <h3 className="text-sm font-semibold text-neutral-700 flex items-center gap-2">
-                <Building2 className="w-4 h-4 text-nu-primary" />
+                <Building2 className="w-4 h-4 text-brand-primary" />
                 Data Pesantren
               </h3>
 
@@ -153,7 +153,7 @@ export default function DaftarPage() {
             {/* Account Info */}
             <div className="space-y-4 pt-4 border-t">
               <h3 className="text-sm font-semibold text-neutral-700 flex items-center gap-2">
-                <Lock className="w-4 h-4 text-nu-primary" />
+                <Lock className="w-4 h-4 text-brand-primary" />
                 Data Akun
               </h3>
 
@@ -202,19 +202,19 @@ export default function DaftarPage() {
             <label className="flex items-start gap-3 cursor-pointer">
               <input
                 type="checkbox"
-                className="accent-nu-primary w-4 h-4 mt-0.5"
+                className="accent-brand-primary w-4 h-4 mt-0.5"
                 required
               />
               <span className="text-sm text-neutral-600">
                 Saya menyetujui{" "}
-                <Link href="#" className="text-nu-primary font-medium hover:underline">
+                <Link href="#" className="text-brand-primary font-medium hover:underline">
                   Syarat & Ketentuan
                 </Link>{" "}
                 dan{" "}
-                <Link href="#" className="text-nu-primary font-medium hover:underline">
+                <Link href="#" className="text-brand-primary font-medium hover:underline">
                   Kebijakan Privasi
                 </Link>{" "}
-                Marketplace NU
+                Toko Ponpes
               </span>
             </label>
 
@@ -227,7 +227,7 @@ export default function DaftarPage() {
             Sudah punya akun?{" "}
             <Link
               href="/masuk"
-              className="text-nu-primary font-semibold hover:underline"
+              className="text-brand-primary font-semibold hover:underline"
             >
               Masuk di sini
             </Link>
