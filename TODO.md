@@ -1,0 +1,12 @@
+- [ ] Update `src/app/page.tsx` to redesign “Produk Unggulan” section:
+  - [ ] Separate photo frame and text area (no overlay)
+  - [ ] Use clean neutral card backgrounds with consistent spacing
+  - [ ] Implement consistent grid: 1 featured + remaining products in uniform cards
+  - [ ] Simplify badges/pills and keep them consistent + non-overlapping
+  - [ ] Make CTA “Lihat Detail” use brand hijau (consistent highlight)
+  - [ ] Add subtle hover micro-interaction (lift + shadow)
+- [ ] Manual UI test on home page (desktop + mobile) for alignment:
+  - [ ] Featured card spacing + contrast
+  - [ ] Non-feature cards uniform size and whitespace
+  - [ ] Badge, category pill, rating row, price visibility
+  - [ ] Hover states and CTA clarity
