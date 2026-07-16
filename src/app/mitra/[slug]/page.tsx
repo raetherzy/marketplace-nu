@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -9,6 +8,7 @@ import {
   Calendar,
   CheckCircle,
   ChevronRight,
+  Store,
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -45,14 +45,8 @@ export default function MitraPage({ params }: PageProps) {
       <div className="bg-gradient-to-br from-brand-primary to-green-800 text-white">
         <div className="container-page py-16 lg:py-20">
           <div className="flex flex-col lg:flex-row items-center gap-8">
-            <div className="relative w-32 h-32 lg:w-40 lg:h-40 rounded-2xl overflow-hidden bg-white flex items-center justify-center">
-              <Image
-                src={partner.logo}
-                alt={`Logo ${partner.name}`}
-                fill
-                className="object-contain p-3"
-                sizes="(max-width: 1024px) 128px, 160px"
-              />
+            <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-2xl bg-white/95 text-brand-primary flex items-center justify-center">
+              <Store className="w-16 h-16 lg:w-20 lg:h-20" aria-hidden="true" />
             </div>
             <div className="text-center lg:text-left">
               <Badge className="bg-white/20 text-white border-white/30 mb-3">
@@ -138,7 +132,7 @@ export default function MitraPage({ params }: PageProps) {
                   <div>
                     <p className="text-xs text-neutral-400">Alamat</p>
                     <p className="text-sm text-neutral-700">
-                      Indonesia
+                      Sesuai profil mitra
                     </p>
                   </div>
                 </div>

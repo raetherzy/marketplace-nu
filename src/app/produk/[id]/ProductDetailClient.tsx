@@ -248,7 +248,7 @@ export default function ProductDetailClient({ product }: Props) {
             {
               icon: ShieldCheck,
               title: "Produk Original",
-              desc: "100% dari Intan Pariwara",
+              desc: "Disediakan mitra terverifikasi",
             },
             {
               icon: RotateCcw,

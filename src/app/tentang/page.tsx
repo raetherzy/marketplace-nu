@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/Button";
 export const metadata = {
   title: "Tentang Toko Ponpes",
   description:
-    "Toko Ponpes - Platform belanja online khusus untuk Pondok Pesantren di seluruh Indonesia. Dukung ekonomi umat dengan produk berkualitas.",
+    "Toko Ponpes adalah tempat belanja online untuk kebutuhan Pondok Pesantren dengan pilihan produk dari mitra independen.",
 };
 
 export default function TentangPage() {
@@ -24,7 +24,7 @@ export default function TentangPage() {
     {
       icon: Heart,
       title: "Berkhidmat untuk Umat",
-      desc: "Mengabdikan diri untuk kesejahteraan pesantren dan umat Islam Indonesia.",
+      desc: "Mengabdikan diri untuk kesejahteraan pesantren dan komunitasnya.",
     },
     {
       icon: ShieldCheck,
@@ -39,37 +39,37 @@ export default function TentangPage() {
     {
       icon: Award,
       title: "Kualitas Terbaik",
-      desc: "Bekerja sama hanya dengan supplier terpercaya seperti Intan Pariwara.",
+      desc: "Bekerja sama dengan berbagai pemasok independen yang terpercaya.",
     },
   ];
 
   const stats = [
     { value: "500+", label: "Pesantren Terdaftar" },
-    { value: "30+", label: "Tahun Pengalaman Mitra" },
+    { value: "4", label: "Mitra Independen" },
     { value: "1000+", label: "Produk Tersedia" },
-    { value: "34", label: "Provinsi Terjangkau" },
+    { value: "Terbuka", label: "Jaringan Kemitraan" },
   ];
 
   const faqs = [
     {
       q: "Siapa yang bisa berbelanja di Toko Ponpes?",
-      a: "Toko Ponpes dirancang khusus untuk Pondok Pesantren, lembaga pendidikan Islam, dan komunitas pesantren di seluruh Indonesia. Pendaftaran akun menggunakan NPSN pesantren untuk verifikasi.",
+      a: "Toko Ponpes dirancang khusus untuk Pondok Pesantren, lembaga pendidikan Islam, dan komunitas pesantren. Pendaftaran akun menggunakan NPSN pesantren untuk verifikasi.",
     },
     {
       q: "Bagaimana proses pemesanan dalam jumlah besar (grosir)?",
       a: "Kami menyediakan harga grosir khusus untuk pembelian dalam jumlah tertentu. Setiap produk menampilkan batas minimum pembelian grosir dan harga yang lebih ekonomis.",
     },
     {
-      q: "Apakah pengiriman tersedia ke seluruh Indonesia?",
-      a: "Ya, kami melayani pengiriman ke 34 provinsi di Indonesia. Gratis ongkir untuk pembelian minimal Rp 500.000. Estimasi waktu pengiriman 2-5 hari kerja tergantung lokasi.",
+      q: "Bagaimana cakupan pengiriman Toko Ponpes?",
+      a: "Cakupan, biaya, dan estimasi pengiriman ditentukan berdasarkan lokasi pesantren serta mitra yang menyediakan produk. Informasi lengkap ditampilkan sebelum pembayaran.",
     },
     {
       q: "Bagaimana metode pembayaran yang tersedia?",
       a: "Kami menerima pembayaran melalui transfer bank (BCA, BNI, Mandiri, BRI), e-wallet (OVO, DANA, GoPay), dan Cash on Delivery (COD) untuk area tertentu.",
     },
     {
-      q: "Siapa mitra utama Toko Ponpes saat ini?",
-      a: "Saat ini mitra utama kami adalah Intan Pariwara, distributor perlengkapan pendidikan bersertifikat ISO 9001:2015, SNI, dan Halal. Kami akan terus menambah mitra terpercaya lainnya.",
+      q: "Apakah katalog bergantung pada satu mitra?",
+      a: "Tidak. Toko Ponpes membuka katalog bagi berbagai mitra independen yang telah diverifikasi agar pilihan dan data produk tidak terpusat pada satu pihak.",
     },
   ];
 
@@ -85,9 +85,9 @@ export default function TentangPage() {
             Tentang Toko Ponpes
           </h1>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
-            Platform belanja online khusus untuk Pondok Pesantren di seluruh
-            Indonesia. Menyediakan perlengkapan pendidikan berkualitas dengan
-            harga terjangkau, didukung mitra terpercaya.
+            Tempat belanja online untuk kebutuhan Pondok Pesantren. Katalog
+            disediakan oleh berbagai mitra independen agar pilihan produk tetap
+            terbuka dan tidak terpusat pada satu pihak.
           </p>
         </div>
       </div>
@@ -121,7 +121,7 @@ export default function TentangPage() {
             </h2>
             <p className="text-neutral-600 leading-relaxed">
               Menjadi platform marketplace terdepan dan terpercaya untuk
-              kebutuhan Pondok Pesantren di Indonesia, yang menghubungkan
+              kebutuhan Pondok Pesantren, yang menghubungkan
               pesantren dengan supplier berkualitas, mendukung ekonomi umat,
               dan mempermudah pengadaan perlengkapan pendidikan.
             </p>

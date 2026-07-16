@@ -1,25 +1,25 @@
 
 PRODUCT REQUIREMENTS DOCUMENT
-Website Marketplace NU
+Toko Ponpes
 Khusus Pondok Pesantren
 
-Produk Mitra: Intan Pariwara (Fase 1: Kategori Kertas)
+Produk Mitra: Berbagai mitra independen (Fase 1: Kategori Kertas)
 
 
-Nama Proyek	Marketplace NU - Pondok Pesantren
+Nama Proyek	Toko Ponpes
 Tipe Dokumen	Product Requirements Document (PRD)
 Versi	1.0
 Tanggal Dibuat	Juni 2025
-Pemangku Kepentingan	NU, Intan Pariwara, Pengelola Pondok Pesantren
+Pemangku Kepentingan	Pengelola Pondok Pesantren dan mitra independen
 Status	Draft - Review Internal
-Penulis	Tim Produk Digital NU
+Penulis	Tim Produk Toko Ponpes
 
 
 1. Ringkasan Eksekutif
 
-Dokumen ini mendeskripsikan kebutuhan produk untuk pengembangan mockup website marketplace Nahdlatul Ulama (NU) yang difokuskan pada ekosistem Pondok Pesantren di seluruh Indonesia. Platform ini dirancang sebagai jembatan digital antara kebutuhan operasional pesantren dengan produk-produk berkualitas dari mitra resmi, dimulai dari Intan Pariwara sebagai mitra pertama.
+Dokumen ini mendeskripsikan kebutuhan produk untuk pengembangan mockup Toko Ponpes yang berfokus pada kebutuhan Pondok Pesantren. Platform dirancang sebagai penghubung digital antara kebutuhan operasional pesantren dan produk berkualitas dari berbagai mitra independen, tanpa memusatkan katalog pada satu pihak.
 
-Pada fase awal (Fase 1), platform akan menampilkan kategori produk kertas dari Intan Pariwara sebagai proof-of-concept sebelum dikembangkan ke lini produk lengkap seperti buku pelajaran, alat tulis, dan perlengkapan pesantren lainnya.
+Pada fase awal (Fase 1), platform menampilkan kategori produk kertas dari beberapa mitra sebagai proof-of-concept sebelum dikembangkan ke lini produk lengkap seperti buku pelajaran, alat tulis, dan perlengkapan pesantren lainnya.
 
 2. Latar Belakang & Konteks
 
@@ -33,17 +33,17 @@ Pondok Pesantren di Indonesia menghadapi berbagai tantangan dalam memenuhi kebut
 Proses pengadaan saat ini masih dilakukan secara konvensional, melalui toko offline atau pembelian tidak terstruktur yang mengakibatkan inefisiensi biaya dan waktu.
 
 2.2 Peluang
-NU sebagai organisasi Islam terbesar di Indonesia memiliki jaringan pesantren yang sangat luas. Dengan menghadirkan platform marketplace khusus, NU dapat:
+Toko Ponpes hadir sebagai platform khusus yang dapat:
 •	Memberikan nilai tambah digital kepada anggota dan mitra pesantren
-•	Membangun ekosistem ekonomi digital berbasis komunitas NU
-•	Membuka kanal distribusi baru yang efisien bagi mitra produsen seperti Intan Pariwara
+•	Membangun ekosistem ekonomi digital berbasis komunitas pesantren
+•	Membuka kanal distribusi baru yang efisien bagi berbagai mitra produsen
 •	Meningkatkan kemandirian ekonomi pesantren melalui akses produk yang lebih terjangkau
 
 3. Tujuan Produk
 
 3.1 Tujuan Utama
 1.	Membangun mockup website marketplace yang berfokus pada kebutuhan Pondok Pesantren
-2.	Mengintegrasikan katalog produk Intan Pariwara sebagai mitra perdana
+2.	Mengintegrasikan katalog dari beberapa mitra independen sejak awal
 3.	Menampilkan kategori produk kertas sebagai MVP (Minimum Viable Product) pada Fase 1
 4.	Menciptakan pengalaman belanja yang mudah, aman, dan terpercaya bagi pengelola pesantren
 
@@ -78,14 +78,14 @@ Tujuan	Mendapatkan produk terbaik dengan anggaran yang tersedia
 5. Fitur & Fungsionalitas
 
 5.1 Halaman Utama (Homepage)
-Halaman utama merupakan wajah platform dan harus mencerminkan identitas NU serta memberikan navigasi yang jelas.
+Halaman utama merupakan wajah platform dan harus mencerminkan identitas Toko Ponpes serta memberikan navigasi yang jelas.
 
 Komponen yang diperlukan:
-•	Header dengan logo NU, navigasi utama, ikon keranjang belanja, dan tombol masuk/daftar
-•	Banner hero yang menampilkan value proposition platform dan identitas NU
+•	Header dengan ikon Toko Ponpes, navigasi utama, ikon keranjang belanja, dan tombol masuk/daftar
+•	Banner hero yang menampilkan value proposition dan identitas Toko Ponpes
 •	Seksi kategori produk unggulan (dimulai dari Kertas)
-•	Galeri produk terbaru/unggulan dari Intan Pariwara
-•	Seksi profil mitra resmi (Intan Pariwara)
+•	Galeri produk terbaru/unggulan dari berbagai mitra
+•	Seksi profil berbagai mitra independen
 •	Testimoni dari pengelola pesantren
 •	Footer dengan informasi kontak, tautan cepat, dan informasi legal
 
@@ -125,9 +125,9 @@ Notifikasi	Update status pesanan via email dan WhatsApp	Fase 1
 •	Input kode voucher/diskon
 •	Pilihan metode pembayaran: Transfer Bank, Virtual Account, COD (terbatas)
 
-5.5 Halaman Mitra - Intan Pariwara
-•	Profil resmi Intan Pariwara dengan logo dan deskripsi perusahaan
-•	Daftar lengkap produk dari Intan Pariwara
+5.5 Halaman Mitra
+•	Profil setiap mitra dengan ikon dan deskripsi usaha
+•	Daftar produk dari mitra terkait
 •	Sertifikasi dan penghargaan mitra
 •	Kontak langsung mitra untuk pembelian dalam jumlah besar
 
@@ -135,7 +135,7 @@ Notifikasi	Update status pesanan via email dan WhatsApp	Fase 1
 
 6.1 Identitas Visual
 Elemen	Spesifikasi
-Warna Primer	Hijau NU (#1A7F4B) - mencerminkan identitas NU
+Warna Primer	Hijau (#1A7F4B) - mencerminkan identitas Toko Ponpes
 Warna Sekunder	Emas (#C9A227) - keanggunan dan kepercayaan
 Warna Netral	Abu-abu (#F5F5F5) untuk background, #4A4A4A untuk teks
 Font Utama	Inter atau Poppins (Google Fonts - gratis)
@@ -147,7 +147,7 @@ Tone Komunikasi	Ramah, profesional, Islami, dan mudah dipahami
 5.	Mobile-First: Mayoritas pengguna mengakses via smartphone
 6.	Aksesibilitas: Ukuran font minimal 14px, kontras warna memenuhi WCAG AA
 7.	Kejelasan: CTA (Call-to-Action) yang jelas dan mudah ditemukan
-8.	Kepercayaan: Tampilkan logo resmi NU, sertifikasi mitra, dan ulasan asli
+8.	Kepercayaan: Tampilkan identitas Toko Ponpes, verifikasi mitra, dan ulasan asli
 9.	Kecepatan: Optimasi gambar, lazy loading, target LCP < 2.5 detik
 
 6.3 Sitemap & Alur Pengguna
@@ -155,13 +155,13 @@ Halaman	URL	Deskripsi
 Beranda	/	Landing page utama
 Katalog Produk	/produk	Daftar semua produk dengan filter
 Detail Produk	/produk/:id	Halaman detail produk tunggal
-Mitra - Intan Pariwara	/mitra/intan-pariwara	Profil dan produk Intan Pariwara
+Profil Mitra	/mitra/[slug]	Profil dan produk setiap mitra
 Keranjang	/keranjang	Isi keranjang belanja
 Checkout	/checkout	Proses pemesanan
 Konfirmasi Pesanan	/pesanan/:id	Detail dan status pesanan
 Login/Daftar	/masuk & /daftar	Autentikasi pengguna
 Profil Pesantren	/profil	Manajemen akun pesantren
-Tentang Platform	/tentang	Informasi platform dan NU
+Tentang Platform	/tentang	Informasi Toko Ponpes
 
 7. Persyaratan Teknis
 
@@ -190,7 +190,7 @@ Aksesibilitas	WCAG 2.1 Level AA
 
 Fase	Fokus	Durasi	Deliverable Utama
 Fase 0 - Discovery	Riset pengguna, wireframe, UX design	2 minggu	Wireframe & Prototype Figma
-Fase 1 - MVP	Mockup statis dengan produk kertas Intan Pariwara	4 minggu	Website mockup fungsional
+Fase 1 - MVP	Mockup statis dengan produk dari beberapa mitra	4 minggu	Website mockup fungsional
 Fase 2 - Beta	Sistem pemesanan, akun, checkout	6 minggu	Platform beta dengan transaksi
 Fase 3 - Launch	Ekspansi produk, fitur lanjutan, optimasi	Ongoing	Platform publik penuh
 
@@ -205,33 +205,33 @@ Pada Fase 1, fokus utama adalah pembuatan mockup visual yang fungsional dengan b
 9. Asumsi, Batasan & Risiko
 
 9.1 Asumsi
-•	Data produk kertas dari Intan Pariwara tersedia dan dapat digunakan untuk mockup
-•	Intan Pariwara menyetujui penggunaan nama, logo, dan konten produk mereka
+•	Data produk kertas dari beberapa mitra tersedia dan dapat digunakan untuk mockup
+•	Setiap mitra menyetujui penggunaan nama dan konten produk mereka
 •	Tim desain dan developer tersedia sesuai jadwal
 •	Pesantren target memiliki akses internet yang memadai
 
 9.2 Batasan Fase 1
-•	Belum ada integrasi sistem ERP atau inventaris Intan Pariwara
+•	Belum ada integrasi sistem ERP atau inventaris mitra
 •	Metode pembayaran belum aktif pada fase mockup
 •	Layanan pengiriman real-time belum terintegrasi
 •	Harga yang ditampilkan bersifat indikatif
 
 9.3 Risiko dan Mitigasi
 Risiko	Dampak	Probabilitas	Mitigasi
-Data produk Intan Pariwara terlambat tersedia	Tinggi	Menengah	Gunakan data dummy/placeholder sementara
+Data produk mitra terlambat tersedia	Tinggi	Menengah	Gunakan data dummy/placeholder sementara
 Resistensi adopsi digital dari pesantren	Menengah	Menengah	Sosialisasi dan pelatihan penggunaan
 Keterbatasan koneksi internet di pesantren	Tinggi	Tinggi	Optimasi Progressive Web App (PWA)
-Persaingan dengan marketplace umum (Tokopedia, dll)	Menengah	Tinggi	Differensiasi via harga khusus pesantren & kepercayaan NU
+Persaingan dengan marketplace umum (Tokopedia, dll)	Menengah	Tinggi	Diferensiasi melalui kebutuhan khusus pesantren dan mitra terverifikasi
 
 10. Pertanyaan Terbuka
 
 Hal-hal berikut perlu dikonfirmasi sebelum pengembangan berlanjut ke Fase 2:
 
 No.	Pertanyaan	Pemilik	Status
-1	Apakah Intan Pariwara memberikan harga khusus untuk pesantren NU?	Tim Bisnis NU	Belum dijawab
-2	Siapa yang mengelola operasional platform setelah launch?	Manajemen NU	Belum dijawab
+1	Apakah setiap mitra memberikan harga khusus untuk pesantren?	Tim Bisnis Toko Ponpes	Belum dijawab
+2	Siapa yang mengelola operasional platform setelah peluncuran?	Manajemen Toko Ponpes	Belum dijawab
 3	Model bisnis: komisi per transaksi atau biaya berlangganan?	Tim Produk	Belum dijawab
-4	Apakah platform akan dibuka untuk mitra lain selain Intan Pariwara di masa depan?	Stakeholder NU	Belum dijawab
+4	Bagaimana proses verifikasi dan penambahan mitra baru?	Pengelola Toko Ponpes	Belum dijawab
 5	Apakah ada integrasi dengan data pesantren dari Kemenag RI?	Tim Teknis	Perlu diteliti
 
 11. Glosarium
@@ -245,10 +245,9 @@ CTA	Call-to-Action - elemen yang mendorong pengguna untuk mengambil tindakan
 WCAG	Web Content Accessibility Guidelines - standar aksesibilitas web internasional
 LCP	Largest Contentful Paint - metrik kecepatan muat halaman web
 PWA	Progressive Web App - aplikasi web yang dapat berfungsi seperti aplikasi mobile
-NU	Nahdlatul Ulama - organisasi Islam terbesar di Indonesia
 Pesantren	Lembaga pendidikan Islam tradisional di Indonesia
 
 
 
 Dokumen ini bersifat rahasia dan hanya untuk keperluan internal.
-PRD Marketplace NU - Pondok Pesantren | Versi 1.0 | Juni 2025
+PRD Toko Ponpes | Versi 1.0 | Juni 2025

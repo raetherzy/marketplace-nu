@@ -6,7 +6,7 @@ import KatalogPage from "./KatalogPage";
 export const metadata: Metadata = {
   title: "Katalog Produk",
   description:
-    "Jelajahi katalog produk kertas dan alat tulis dari Intan Pariwara untuk Pondok Pesantren. Kertas HVS, buku tulis, karton, dan lainnya.",
+    "Jelajahi katalog kertas dan alat tulis di Toko Ponpes. Temukan kertas HVS, buku tulis, karton, dan kebutuhan lainnya.",
 };
 
 export default function Page() {

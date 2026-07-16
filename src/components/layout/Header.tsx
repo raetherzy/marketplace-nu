@@ -26,7 +26,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-neutral-200 shadow-sm">
       {/* Top banner */}
       <div className="bg-brand-primary text-white text-xs sm:text-sm text-center py-1.5 px-4">
-        Marketplace Pondok Pesantren Se-Indonesia
+        Belanja Mudah untuk Kebutuhan Pesantren
       </div>
 
       <div className="container-page">
@@ -38,7 +38,7 @@ export function Header() {
             </div>
             <div className="hidden sm:block">
               <p className="font-semibold text-neutral-800 text-sm leading-tight">Toko Ponpes</p>
-              <p className="text-xs text-neutral-400 leading-tight">Pondok Pesantren</p>
+              <p className="text-xs text-neutral-400 leading-tight">Kebutuhan Pesantren</p>
             </div>
           </Link>
 

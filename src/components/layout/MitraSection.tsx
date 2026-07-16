@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { Calendar, CheckCircle, Phone, Mail, MessageCircle, MapPin, ChevronRight } from "lucide-react";
+import { Calendar, CheckCircle, Phone, Mail, MessageCircle, MapPin, ChevronRight, Store } from "lucide-react";
 import { partners } from "@/data/products";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -20,7 +19,7 @@ export function MitraSection() {
             Partner Kami
           </h2>
           <p className="text-neutral-500 max-w-2xl mx-auto text-base leading-relaxed">
-            Bermitra dengan distributor dan penerbit terpercaya untuk menyediakan produk berkualitas bagi Pondok Pesantren di seluruh Indonesia.
+            Katalog terbuka dari distributor dan penerbit independen, sehingga pilihan produk tidak bergantung pada satu mitra.
           </p>
         </div>
 
@@ -32,16 +31,10 @@ export function MitraSection() {
               href={`/mitra/${partner.slug}`}
               className="group bg-white rounded-2xl border border-neutral-200 p-6 hover:border-brand-primary/30 hover:shadow-lg hover:shadow-brand-primary/5 transition-all duration-300 flex flex-col"
             >
-              {/* Logo & Name */}
+              {/* Icon & Name */}
               <div className="flex items-center gap-4 mb-4">
-                <div className="relative w-14 h-14 rounded-xl overflow-hidden bg-neutral-100 flex items-center justify-center shrink-0 group-hover:ring-2 ring-brand-primary/20 transition-all">
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    fill
-                    className="object-contain p-2"
-                    sizes="56px"
-                  />
+                <div className="w-14 h-14 rounded-xl bg-brand-primary-light text-brand-primary flex items-center justify-center shrink-0 group-hover:ring-2 ring-brand-primary/20 transition-all">
+                  <Store className="w-7 h-7" aria-hidden="true" />
                 </div>
                 <div className="min-w-0">
                   <h3 className="font-bold text-neutral-800 group-hover:text-brand-primary transition-colors text-base leading-tight truncate">
@@ -133,14 +126,8 @@ export function MitraGrid() {
           className="group bg-white rounded-2xl border border-neutral-200 p-6 hover:border-brand-primary/30 hover:shadow-lg hover:shadow-brand-primary/5 transition-all duration-300 flex flex-col"
         >
           <div className="flex items-center gap-4 mb-4">
-            <div className="relative w-14 h-14 rounded-xl overflow-hidden bg-neutral-100 flex items-center justify-center shrink-0">
-              <Image
-                src={partner.logo}
-                alt={partner.name}
-                fill
-                className="object-contain p-2"
-                sizes="56px"
-              />
+            <div className="w-14 h-14 rounded-xl bg-brand-primary-light text-brand-primary flex items-center justify-center shrink-0">
+              <Store className="w-7 h-7" aria-hidden="true" />
             </div>
             <div className="min-w-0">
               <h3 className="font-bold text-neutral-800 group-hover:text-brand-primary transition-colors text-base leading-tight truncate">
@@ -227,7 +214,7 @@ export function MitraDetail({ partnerId }: MitraDetailProps) {
             <MapPin className="w-4 h-4 text-brand-primary mt-0.5" />
             <div>
               <p className="text-xs text-neutral-400">Alamat</p>
-              <p className="text-sm text-neutral-700">Indonesia</p>
+              <p className="text-sm text-neutral-700">Sesuai profil mitra</p>
             </div>
           </div>
         </div>

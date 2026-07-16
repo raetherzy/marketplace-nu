@@ -13,7 +13,7 @@ export interface Product {
   stock: "tersedia" | "habis" | "preorder";
   rating: number;
   reviewCount: number;
-  partner: "intan-pariwara";
+  partner: "al-hikmah-printing" | "barokah-stationery" | "nurul-ilmu-publisher" | "amanah-edu-supply";
   weight: number; // gram
 }
 
@@ -35,7 +35,6 @@ export interface Partner {
   id: string;
   name: string;
   slug: string;
-  logo: string;
   description: string;
   certifications: string[];
   categoryNames: string[];

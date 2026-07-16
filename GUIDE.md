@@ -1,4 +1,4 @@
-# Panduan Testing — Marketplace NU Mockup (Phase 1)
+# Panduan Testing — Toko Ponpes Mockup (Phase 1)
 
 > Dokumen ini menjelaskan semua halaman, fitur, dan interaksi yang bisa Anda lihat dan coba pada mockup Phase 1.
 
@@ -29,10 +29,10 @@ npm run start
 
 ### 1. Beranda (`/`)
 **Bisa dilihat:**
-- Hero banner dengan gradient NU hijau + tombol "Lihat Produk" dan "Tentang Kami"
+- Hero banner hijau Toko Ponpes + tombol "Lihat Produk" dan "Tentang Kami"
 - 5 kartu kategori (Kertas HVS, Kertas Buram, Buku Tulis, Karton Manila, Continuous Form) — bisa diklik
 - 8 produk unggulan dengan gambar, nama, harga, rating bintang
-- Section mitra unggulan (Intan Pariwara) dengan badge sertifikasi
+- Section berisi berbagai mitra independen dengan badge sertifikasi
 - 3 testimoni dari perwakilan pesantren
 - CTA bawah dengan tombol daftar & browse produk
 
@@ -94,10 +94,10 @@ npm run start
 
 ---
 
-### 4. Halaman Mitra (`/mitra/intan-pariwara`)
+### 4. Halaman Mitra (`/mitra/[slug]`)
 **Bisa dilihat:**
 - Hero dengan gradient + nama mitra + deskripsi singkat
-- Sidebar: tentang mitra, badge sertifikasi (ISO 9001, SNI, Halal, Mitra Resmi NU), info kontak, tombol WhatsApp
+- Sidebar: tentang mitra, badge sertifikasi, info kontak, tombol WhatsApp
 - Grid produk milik mitra tersebut
 
 **Bisa dicoba:**
@@ -215,7 +215,7 @@ npm run start
 ## Fitur Global yang Bisa Dicoba
 
 ### Header (di semua halaman)
-- Logo NU + nama "Marketplace NU" → klik ke beranda
+- Ikon toko + nama "Toko Ponpes" → klik ke beranda
 - Link navigasi: Beranda, Produk, Mitra, Tentang
 - Ikon keranjang dengan badge jumlah item (update real-time saat tambah/hapus produk)
 - Tombol "Masuk" → ke `/masuk`

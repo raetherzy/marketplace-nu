@@ -33,7 +33,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.8,
     reviewCount: 124,
-    partner: "intan-pariwara",
+    partner: "barokah-stationery",
     weight: 2200,
   },
   {
@@ -59,7 +59,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.7,
     reviewCount: 98,
-    partner: "intan-pariwara",
+    partner: "amanah-edu-supply",
     weight: 2200,
   },
   {
@@ -85,7 +85,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.6,
     reviewCount: 76,
-    partner: "intan-pariwara",
+    partner: "barokah-stationery",
     weight: 2500,
   },
   {
@@ -111,7 +111,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.5,
     reviewCount: 65,
-    partner: "intan-pariwara",
+    partner: "amanah-edu-supply",
     weight: 2500,
   },
   {
@@ -136,7 +136,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.4,
     reviewCount: 42,
-    partner: "intan-pariwara",
+    partner: "barokah-stationery",
     weight: 2800,
   },
   {
@@ -164,7 +164,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.3,
     reviewCount: 88,
-    partner: "intan-pariwara",
+    partner: "al-hikmah-printing",
     weight: 1800,
   },
   {
@@ -191,7 +191,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.2,
     reviewCount: 56,
-    partner: "intan-pariwara",
+    partner: "al-hikmah-printing",
     weight: 2000,
   },
   {
@@ -218,7 +218,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.7,
     reviewCount: 210,
-    partner: "intan-pariwara",
+    partner: "nurul-ilmu-publisher",
     weight: 120,
   },
   {
@@ -245,7 +245,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.6,
     reviewCount: 156,
-    partner: "intan-pariwara",
+    partner: "nurul-ilmu-publisher",
     weight: 130,
   },
   {
@@ -272,7 +272,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.5,
     reviewCount: 132,
-    partner: "intan-pariwara",
+    partner: "al-hikmah-printing",
     weight: 165,
   },
   {
@@ -299,7 +299,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.4,
     reviewCount: 45,
-    partner: "intan-pariwara",
+    partner: "amanah-edu-supply",
     weight: 250,
   },
   {
@@ -323,7 +323,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.3,
     reviewCount: 32,
-    partner: "intan-pariwara",
+    partner: "nurul-ilmu-publisher",
     weight: 480,
   },
   {
@@ -345,7 +345,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.5,
     reviewCount: 38,
-    partner: "intan-pariwara",
+    partner: "barokah-stationery",
     weight: 500,
   },
   {
@@ -367,7 +367,7 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.4,
     reviewCount: 28,
-    partner: "intan-pariwara",
+    partner: "amanah-edu-supply",
     weight: 400,
   },
   {
@@ -389,39 +389,21 @@ export const products: Product[] = [
     stock: "tersedia",
     rating: 4.3,
     reviewCount: 22,
-    partner: "intan-pariwara",
+    partner: "barokah-stationery",
     weight: 420,
   },
 ];
 
 export const partners: Partner[] = [
   {
-    id: "intan-pariwara",
-    name: "Intan Pariwara",
-    slug: "intan-pariwara",
-    logo: "/intanpariwara.png",
-    description:
-      "Intan Pariwara adalah partner utama dalam penyediaan perlengkapan pendidikan untuk Pondok Pesantren di seluruh Indonesia. Berpengalaman lebih dari 30 tahun dalam industri alat tulis dan percetakan, Intan Pariwara berkomitmen menyediakan produk berkualitas dengan harga terjangkau bagi komunitas pesantren.",
-    certifications: ["ISO 9001:2015", "SNI", "Halal Certified"],
-    categoryNames: ["Kertas HVS", "Kertas Buram", "Buku Tulis", "Buku Gambar", "Karton"],
-    productCount: 15,
-    contact: {
-      phone: "+62 21 1234 5678",
-      email: "pesantren@intanpariwara.co.id",
-      wa: "6281212345678",
-    },
-    since: 1992,
-  },
-  {
     id: "al-hikmah-printing",
     name: "Al-Hikmah Printing",
     slug: "al-hikmah-printing",
-    logo: "/intanpariwara.png",
     description:
       "Percetakan Al-Hikmah menyediakan layanan cetak kitab, modul ajar, dan buku pelajaran pesantren dengan kualitas premium. Berpengalaman melayani pesantren-pesantren di Jawa Tengah dan Jawa Timur.",
     certifications: ["SNI", "Halal Certified"],
     categoryNames: ["Buku Tulis", "Kertas HVS"],
-    productCount: 8,
+    productCount: 3,
     contact: {
       phone: "+62 24 5678 1234",
       email: "info@alhikmah-print.id",
@@ -433,12 +415,11 @@ export const partners: Partner[] = [
     id: "barokah-stationery",
     name: "Barokah Stationery",
     slug: "barokah-stationery",
-    logo: "/intanpariwara.png",
     description:
       "Distributor alat tulis dan perlengkapan kantor pesantren terlengkap di Jawa Barat. Menyediakan produk dari berbagai brand ternama dengan harga khusus pesantren.",
     certifications: [],
     categoryNames: ["Kertas HVS", "Kertas Buram", "Buku Tulis", "Buku Gambar"],
-    productCount: 12,
+    productCount: 5,
     contact: {
       phone: "+62 22 9876 5432",
       email: "support@barokah-stationery.id",
@@ -450,12 +431,11 @@ export const partners: Partner[] = [
     id: "nurul-ilmu-publisher",
     name: "Nurul Ilmu Publisher",
     slug: "nurul-ilmu-publisher",
-    logo: "/intanpariwara.png",
     description:
       "Penerbit buku-buku pendidikan Islam dan kitab kuning untuk pesantren. Menyediakan buku ajar, modul pembelajaran, dan referensi keislaman dengan standar kualitas tinggi.",
     certifications: ["SNI", "Halal Certified"],
     categoryNames: ["Buku Tulis", "Buku Gambar", "Karton"],
-    productCount: 6,
+    productCount: 3,
     contact: {
       phone: "+62 31 3456 7890",
       email: "penerbit@nurul-ilmu.id",
@@ -467,12 +447,11 @@ export const partners: Partner[] = [
     id: "amanah-edu-supply",
     name: "Amanah Edu Supply",
     slug: "amanah-edu-supply",
-    logo: "/intanpariwara.png",
     description:
       "Pemasok perlengkapan pendidikan dan alat peraga pesantren modern. Menyediakan solusi lengkap untuk kebutuhan ruang kelas, asrama, dan administrasi pesantren.",
     certifications: ["ISO 9001:2015"],
     categoryNames: ["Kertas HVS", "Buku Tulis", "Buku Gambar"],
-    productCount: 9,
+    productCount: 4,
     contact: {
       phone: "+62 21 2222 3333",
       email: "cs@amanah-edu.id",
@@ -498,7 +477,7 @@ export const testimonials: Testimonial[] = [
     role: "Kepala Madrasah",
     pesantren: "Pondok Pesantren Darul Ulum, Surabaya",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
-    text: "Produk dari Intan Pariwara kualitasnya terjamin. Platform ini memudahkan kami membandingkan harga dan memesan dalam jumlah besar untuk kebutuhan satu semester.",
+    text: "Pilihan produk dari berbagai mitra memudahkan kami membandingkan harga dan memesan sesuai kebutuhan satu semester.",
     rating: 5,
   },
   {

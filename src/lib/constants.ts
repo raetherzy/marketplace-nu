@@ -1,6 +1,6 @@
 export const SITE_NAME = "Toko Ponpes";
 export const SITE_DESCRIPTION =
-  "Marketplace untuk Pondok Pesantren di seluruh Indonesia. Temukan kebutuhan operasional, alat tulis, perlengkapan ibadah, dan produk terpercaya dari mitra pilihan.";
+  "Toko Ponpes untuk memenuhi kebutuhan operasional, alat tulis, perlengkapan ibadah, dan produk pilihan bagi pondok pesantren.";
 export const SITE_URL = "https://tokoponpes.id";
 
 export const NAV_LINKS = [
@@ -27,7 +27,7 @@ export const FOOTER_LINKS = {
     email: "halo@tokoponpes.id",
     phone: "+62 812-3456-7890",
     wa: "6281234567890",
-    address: "Indonesia",
+    address: "Layanan daring",
   },
   sosial: {
     instagram: "https://instagram.com/tokoponpes",

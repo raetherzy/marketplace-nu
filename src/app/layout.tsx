@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   keywords: [
     "marketplace pesantren",
-    "pesantren Indonesia",
+    "toko ponpes",
     "pondok pesantren",
     "alat tulis pesantren",
     "kertas",
-    "Intan Pariwara",
+    "Toko Ponpes",
     "kebutuhan pesantren",
   ],
   openGraph: {

@@ -16,7 +16,7 @@ export function Footer() {
               <span className="font-semibold text-white text-sm">Toko Ponpes</span>
             </div>
             <p className="text-sm leading-relaxed mb-4">
-              Marketplace Pondok Pesantren di seluruh Indonesia, menghubungkan kebutuhan operasional dengan mitra terpercaya.
+              Toko kebutuhan Pondok Pesantren yang menghubungkan pengelola dengan mitra terpercaya secara terbuka.
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm">
@@ -90,8 +90,7 @@ export function Footer() {
             © {new Date().getFullYear()} Toko Ponpes. Seluruh hak cipta dilindungi.
           </p>
           <p className="text-xs text-neutral-500">
-            Didukung oleh{" "}
-            <span className="text-brand-secondary font-medium">Intan Pariwara</span>
+            Katalog terbuka dari berbagai mitra pesantren.
           </p>
         </div>
       </div>

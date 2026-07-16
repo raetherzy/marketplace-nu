@@ -25,18 +25,18 @@ export default function HomePage() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 sm:mb-8">
               <span className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse" />
-              <span className="text-xs sm:text-sm font-medium text-white/90">Marketplace Pesantren #1 Indonesia</span>
+              <span className="text-xs sm:text-sm font-medium text-white/90">Toko Ponpes</span>
             </div>
 
             {/* Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] mb-5 sm:mb-6">
               Kebutuhan Pesantren
-              <span className="block text-brand-secondary mt-1">Satu Tempat, Harga Terbaik</span>
+              <span className="block text-brand-secondary mt-1">Pilihan Terbuka, Harga Terbaik</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg md:text-xl text-white/75 max-w-xl mx-auto leading-relaxed mb-8 sm:mb-10">
-              Platform pengadaan kertas, buku, alat tulis, dan perlengkapan pendidikan berkualitas untuk pesantren di seluruh Indonesia.
+              Tempat belanja kertas, buku, alat tulis, dan perlengkapan pendidikan berkualitas untuk kebutuhan pesantren.
             </p>
 
             {/* CTA Buttons */}
@@ -58,7 +58,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
               {[
                 { icon: Shield, title: "Partner Terpercaya", desc: "Produk original dari partner resmi" },
-                { icon: Truck, title: "Pengiriman Nasional", desc: "Jangkau seluruh Indonesia" },
+                { icon: Truck, title: "Pengiriman Fleksibel", desc: "Disesuaikan dengan lokasi pesantren" },
                 { icon: Star, title: "Harga Grosir", desc: "Hemat untuk pesantren" },
               ].map(({ icon: Icon, title, desc }) => (
                 <div key={title} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3.5">
@@ -84,7 +84,7 @@ export default function HomePage() {
                 Kategori Produk
               </h2>
               <p className="text-neutral-500 max-w-2xl text-base leading-relaxed">
-                Temukan kebutuhan kertas, buku, dan perlengkapan pendidikan pesantren dari Intan Pariwara.
+                Temukan kebutuhan kertas, buku, dan perlengkapan pendidikan dari berbagai mitra pesantren.
               </p>
             </div>
             <Link
@@ -154,7 +154,7 @@ export default function HomePage() {
                 Produk Unggulan
               </h2>
               <p className="text-neutral-500 max-w-2xl text-base leading-relaxed">
-                Produk terbaik pilihan pesantren, harga khusus dan kualitas terjamin dari Intan Pariwara.
+                Produk pilihan pesantren dengan harga khusus dan kualitas yang terjaga.
               </p>
             </div>
             <Link

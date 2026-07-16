@@ -1,9 +1,9 @@
-# Arsitektur Marketplace NU - Phase 1 Mockup
+# Arsitektur Toko Ponpes - Phase 1 Mockup
 
 ## 1. Overview
 
-**Tujuan:** Mockup fungsional website marketplace NU untuk Pondok Pesantren.
-**Partner:** Intan Pariwara (Phase 1: kategori kertas)
+**Tujuan:** Mockup fungsional Toko Ponpes untuk kebutuhan Pondok Pesantren.
+**Partner:** Berbagai mitra independen (Phase 1: kategori kertas)
 **Scope:** Visual-only, no real backend transactions
 
 ---
@@ -26,7 +26,7 @@
 
 ### Warna
 ```
-Primary:     Hijau NU   #1A7F4B
+Primary:     Hijau Toko Ponpes   #1A7F4B
 Secondary:   Emas       #C9A227
 Background:  Abu muda   #F5F5F5
 Text:        Abu gelap  #4A4A4A
@@ -71,7 +71,7 @@ xl:  1280px  Wide
 /                     → Homepage
 /produk               → Katalog Produk (filter + grid)
 /produk/[id]          → Detail Produk
-/mitra/intan-pariwara → Halaman Mitra Intan Pariwara
+/mitra/[slug]          → Halaman profil mitra independen
 /keranjang            → Keranjang Belanja
 /checkout             → Checkout (form UI only)
 /pesanan/[id]         → Konfirmasi & Status Pesanan
@@ -100,7 +100,7 @@ interface Product {
   stock: 'tersedia' | 'habis' | 'preorder';
   rating: number;         // 1-5
   reviewCount: number;
-  partner: 'intan-pariwara';
+  partner: string;
 }
 ```
 
@@ -165,7 +165,7 @@ Footer
 - Hero banner dengan tagline dan CTA
 - Kategori produk (paper only — visual cards)
 - ProdukUnggulan grid (6-8 produk)
-- Partner section (Intan Pariwara branding)
+- Partner section (daftar mitra independen)
 - Testimoni (3 cards)
 - Footer
 
@@ -216,7 +216,7 @@ Footer
 
 ### Tentang
 - Visi misi
-- Sejarah NU + platform
+- Latar belakang Toko Ponpes
 - Kontak
 
 ---
@@ -240,7 +240,7 @@ Footer
 ## 9. SEO & Metadata
 
 Setiap page memiliki:
-- `title`: "{Page Name} | Marketplace NU"
+- `title`: "{Page Name} | Toko Ponpes"
 - `description`: ringkasan konten page
 - `openGraph`: og:title, og:description, og:image
 - `canonical` URL
@@ -274,7 +274,7 @@ src/
 │   │   ├── page.tsx          # Katalog
 │   │   └── [id]/page.tsx     # Detail Produk
 │   ├── mitra/
-│   │   └── intan-pariwara/page.tsx
+│   │   └── [slug]/page.tsx
 │   ├── keranjang/page.tsx
 │   ├── checkout/page.tsx
 │   ├── pesanan/
